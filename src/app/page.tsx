@@ -21,7 +21,7 @@ export default function Home() {
             variants={FadeRight}
             className=" text-[8vw] leading-[95%] text-secondary"
           >
-            Hi,&nbsp;I'm&nbsp;Jomari
+            Hi,&nbsp;I&apos;m&nbsp;Jomari
           </motion.h3>
           <motion.h1 variants={FadeRight} className=" text-[8vw] leading-[95%]">
             Welcom&nbsp;to&nbsp;my&nbsp;Website
