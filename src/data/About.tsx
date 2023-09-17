@@ -17,7 +17,7 @@ export const about_me = {
       </p>
     </>
   ),
-  image_url: "/images/Me.png",
+  image_url: "./images/Me.png",
 };
 
 export const about_education = {
@@ -39,7 +39,7 @@ export const about_education = {
       </ul>
     </>
   ),
-  image_url: "/images/Me.png",
+  image_url: "./images/Me.png",
 };
 
 export const about_expirience = {
@@ -52,7 +52,7 @@ export const about_expirience = {
         styls
       </p>
     ),
-    image_url: "/images/expirience/magis.png",
+    image_url: "./images/expirience/magis.png",
   },
   optimind: {
     title: "<OptimindTechnologySolutions/>",
@@ -64,7 +64,7 @@ export const about_expirience = {
         client
       </p>
     ),
-    image_url: "/images/expirience/optimind.png",
+    image_url: "./images/expirience/optimind.png",
   },
   lws: {
     title: "<LightweightSolutions/>",
@@ -75,6 +75,6 @@ export const about_expirience = {
         integrate the API from Backend
       </p>
     ),
-    image_url: "/images/expirience/optimind.png",
+    image_url: "./images/expirience/optimind.png",
   },
 };
