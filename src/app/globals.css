@@ -1,0 +1,66 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+  font-family: "rail-way-light";
+  src: url("../../public/fonts/Raleway-light.ttf");
+}
+
+@font-face {
+  font-family: "rail-way-regular";
+  src: url("../../public/fonts/Raleway-Regular.ttf");
+}
+@font-face {
+  font-family: "rail-way-bold";
+  src: url("../../public/fonts/Raleway-Bold.ttf");
+}
+
+/* Variables */
+:root {
+  --background: #c1c1c1;
+  /* f0f0f0 */
+  /* custom colors */
+  --primary: #1a1a1a;
+  --secondary: #8a8a8a;
+  /* custom font */
+  --header: "rail-way-bold";
+  --paragraph: sans-serif;
+}
+
+/* dark mode */
+/* @media (prefers-color-scheme: dark) {
+  :root {
+     --primary: #313131;
+  --secondary: #5c5b5b;
+  }
+} */
+
+* {
+  scroll-behavior: smooth;
+  transition-duration: 500ms;
+  transition-delay: 500ms;
+}
+
+h1 {
+  @apply text-[3rem] font-header font-bold;
+}
+
+h2 {
+  @apply text-[2rem] font-header font-bold;
+}
+
+h3 {
+  @apply text-[1.5rem] font-header font-bold;
+}
+
+p,
+li,
+a {
+  @apply text-[1rem] font-paragraph;
+}
+
+.pageWrapper {
+  background-color: var(--background);
+  color: var(--primary);
+}
