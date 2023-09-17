@@ -2,7 +2,7 @@ import React from "react";
 import { motion } from "framer-motion";
 
 import InviewContainer from "../InviewContainer";
-import { ButtonTransition, FadeRight, StaggerLetter } from "./Animation";
+import { ButtonTransition, StaggerLetter } from "./Animation";
 
 type Props = {
   text: string;
