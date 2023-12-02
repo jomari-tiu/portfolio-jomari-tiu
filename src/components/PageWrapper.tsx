@@ -1,15 +1,8 @@
 "use client";
 
 import React from "react";
-import { motion } from "framer-motion";
-import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { AiTwotonePhone, AiOutlineLinkedin } from "react-icons/ai";
-import { BsMailbox } from "react-icons/bs";
 
-import { GrFacebook } from "react-icons/gr";
-
-import { PageTransition } from "./Animation/Animation";
 import Footer from "./Layout.tsx/Footer";
 import NavigationBar from "./Layout.tsx/Header/NavigationBar";
 

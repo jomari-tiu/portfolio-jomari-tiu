@@ -1,10 +1,7 @@
 "use client";
-import { motion } from "framer-motion";
 import Link from "next/link";
 import { BsArrowRight } from "react-icons/bs";
 
-import LetterAnimation from "@/components/Animation/LetterAnimation";
-import BigCard from "@/components/BigCard";
 import Button from "@/components/Button";
 import Card from "@/components/Card";
 import PageWrapper from "@/components/PageWrapper";

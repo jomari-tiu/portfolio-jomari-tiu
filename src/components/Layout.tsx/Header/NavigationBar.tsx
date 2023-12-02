@@ -1,17 +1,12 @@
 "use client";
 
-import React, { useEffect, useRef, useState } from "react";
+import React, { useEffect, useState } from "react";
 import { motion } from "framer-motion";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-
-import { AiOutlineCloseCircle } from "react-icons/ai";
 import { FaSlackHash } from "react-icons/fa";
-
 import { TiThMenuOutline } from "react-icons/ti";
 
-import { FadeRight, NavigationBarTransition } from "../../Animation/Animation";
-import LetterAnimation from "../../Animation/LetterAnimation";
 import MobileMenu from "./MobileMenu";
 
 const menu = [
@@ -69,19 +64,14 @@ function NavigationBar() {
                 <FaSlackHash className=" text-lg mr-1" />
                 {item.title}
                 {pathname.includes(item.url) && (
-                  <motion.span
-                    layoutId="navigation-menu"
-                    variants={NavigationBarTransition}
-                    initial="initial"
-                    animate="animate"
-                    exit="exit"
+                  <span
                     className={`absolute bottom-0 left-0 w-full h-full ${
                       isOnScroll ? "bg-black" : "bg-[#dd0000]"
                     }  z-10 flex justify-center items-center`}
                   >
                     <FaSlackHash className=" text-lg mr-1" />
                     {item.title}
-                  </motion.span>
+                  </span>
                 )}
               </Link>
             </li>
