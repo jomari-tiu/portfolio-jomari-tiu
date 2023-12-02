@@ -1,27 +1,26 @@
 export const about_me = {
-  title: "!HELLO WORLD",
+  title: "Hello World",
   content: (
     <>
       <p>
-        Hi I am Jomari G. Tiu a Front-End Web Developer and Graduating
-        Information in Technology from Cavite State University - Carmona, I live
-        in GMA Cavite, Im 24 yrs old. My Hobbies are Playing basket ball,
-        spending time with love one, playing mobile games and study more about
-        front end.
+        Hi I am Jomari G. Tiu a Frontend Engineer / Developer, I graduated
+        Information in Technology in Cavite State University - Carmona, and live
+        in GMA Cavite, I am 25 yrs old. My Hobbies are playing Wildrift for
+        killing a boredom or I need to take a break, spending time with love
+        one, and working out for health and releasing stress.
       </p>
       <p>
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt non
-        sit modi. Doloribus earum quasi dignissimos expedita animi dolor eaque
-        pariatur, aliquid veritatis, non tenetur cumque minus error rerum
-        voluptates!
+        Right now, I am extending my frontend knowledge and starting to learn
+        backend with Express JS and MySQL, also learning how to communicate, and
+        socialize.
       </p>
     </>
   ),
-  image_url: "./images/Me.png",
+  image_url: "/images/jomari_tiu.jpg",
 };
 
 export const about_education = {
-  title: "!Educational Attainment",
+  title: "Educational Attainment",
   content: (
     <>
       <ul className=" list-disc list-inside space-y-3">
@@ -39,7 +38,7 @@ export const about_education = {
       </ul>
     </>
   ),
-  image_url: "./images/Me.png",
+  image_url: "/images/expirience/cvsu.png",
 };
 
 export const about_expirience = {
@@ -47,34 +46,34 @@ export const about_expirience = {
     title: "<MagisSolutions/>",
     content: (
       <p>
-        I am a Front End Tailwind developer as a Part timer for 4 Month, I
-        convert PSD web design or existing website to HTML using TAILWIND CSS as
-        styls
+        Magis Solution is my first job in this industry as a part timer frontend
+        developer, where they will send a link o a website through email then I
+        will convert it to tailwind CSS
       </p>
     ),
-    image_url: "./images/expirience/magis.png",
+    image_url: "/images/expirience/magis.png",
   },
   optimind: {
     title: "<OptimindTechnologySolutions/>",
     content: (
       <p>
-        I am a Front End and Wordpress Developer, I convert PSD to HTML with
-        SASS and Adding animation, then put the HTML to Wordpress to add fields
-        using Advance custom fields pro to easily change the content by the
-        client
+        I was a Front End and Wordpress Developer, I maintain and create a
+        website by converting PSD to HTML with SASS, then integrate the HTML to
+        Wordpress and add fields using Advance custom fields pro to easily
+        change the content by the client
       </p>
     ),
-    image_url: "./images/expirience/optimind.png",
+    image_url: "/images/expirience/optimind.png",
   },
   lws: {
     title: "<LightweightSolutions/>",
     content: (
       <p>
-        We create customize system based on client or R&D using NextJS for
-        front, Laravel and MySQL, I create the frontend from wireframe and
-        integrate the API from Backend
+        We create and maintain customized system, client based or R&D projects
+        using NextJS. my role is to convert Wireframe to functionable frontend
+        system/website and integrate the APIs that will came from backend
       </p>
     ),
-    image_url: "./images/expirience/optimind.png",
+    image_url: "/images/expirience/lws.jpg",
   },
 };

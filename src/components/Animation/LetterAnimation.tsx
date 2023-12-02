@@ -1,8 +1,7 @@
 import React from "react";
-import { motion } from "framer-motion";
+import { AnimatePresence, motion } from "framer-motion";
 
 import InviewContainer from "../InviewContainer";
-import { ButtonTransition, StaggerLetter } from "./Animation";
 
 type Props = {
   text: string;
@@ -10,32 +9,52 @@ type Props = {
 };
 
 export default function LetterAnimation({ text, className }: Props) {
-  const ProjectTextarr = text.split("");
+  const textArray = text.split("");
   return (
     <InviewContainer>
-      <h1 className={`${className}`}>
-        <motion.div
-          variants={StaggerLetter}
-          initial="initial"
-          animate="animate"
-          className=" space-x-5"
-        >
-          {ProjectTextarr.map((charracter, index) => (
-            <Letter key={index} variant={ButtonTransition}>
-              {charracter}
-            </Letter>
+      <div className={`${className} items-center overflow-hidden space-x-2`}>
+        <AnimatePresence mode="wait">
+          {textArray.map((character, index) => (
+            <motion.div
+              key={index}
+              variants={toDown}
+              initial="initial"
+              animate="animate"
+              exit="exit"
+              className=" inline-block  text-[5vw]"
+              // whileInView='animate'
+              // viewport={{
+              //   once: true,
+              // }}
+              custom={index}
+            >
+              {character}
+            </motion.div>
           ))}
-        </motion.div>
-      </h1>
+        </AnimatePresence>
+      </div>
     </InviewContainer>
   );
 }
-const Letter = ({
-  children,
-  variant,
-}: {
-  children: React.ReactNode;
-  variant: any;
-}) => {
-  return <motion.span variants={variant}>{children}</motion.span>;
+
+const toDown = {
+  initial: (index: number) => ({
+    y: "-100%",
+    transition: {
+      delay: (0.2 * index) / 2,
+    },
+  }),
+  animate: (index: number) => ({
+    y: 0,
+    transition: {
+      delay: (0.2 * index) / 2,
+    },
+  }),
+  exit: (index: number) => ({
+    y: "-100%",
+
+    transition: {
+      delay: (0.2 * index) / 2,
+    },
+  }),
 };

@@ -20,11 +20,11 @@ export default function Home() {
         <h1 className=" lg:text-[5rem] md:text-[3rem] text-[2.5rem] leading-[95%]">
           Welcome to my Website
         </h1>
-        <h1 className=" lg:text-[7rem] md:text-[5rem] text-[rem] leading-[95%]">
+        <h1 className=" lg:text-[7rem] md:text-[5rem] text-[4rem] leading-[95%]">
           {"<Front-Engineer/>"}
         </h1>
         <div className=" mt-8">
-          <Button>Download CV</Button>
+          <Button onClick={() => {}}>Download CV</Button>
         </div>
       </div>
 

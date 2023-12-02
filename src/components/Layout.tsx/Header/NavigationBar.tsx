@@ -5,74 +5,70 @@ import { motion } from "framer-motion";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 
+import { AiOutlineCloseCircle } from "react-icons/ai";
 import { FaSlackHash } from "react-icons/fa";
 
-import { NavigationBarTransition, fadeUp } from "../Animation/Animation";
+import { TiThMenuOutline } from "react-icons/ti";
+
+import { FadeRight, NavigationBarTransition } from "../../Animation/Animation";
+import LetterAnimation from "../../Animation/LetterAnimation";
+import MobileMenu from "./MobileMenu";
 
 const menu = [
   {
     title: "HOME",
-    url: "/",
+    url: "/home",
   },
   {
-    title: "CONTACT & ABOUT",
-    url: "/contact-&-about",
+    title: "ABOUT",
+    url: "/about",
   },
   {
     title: "PROJECTS",
     url: "/projects",
-  },
-  {
-    title: "EXPIRIENCES",
-    url: "/expiriences",
   },
 ];
 
 function NavigationBar() {
   const pathname = usePathname();
 
-  const elementRef = useRef<any>(null);
-
   const [isOnScroll, setOnScroll] = useState(false);
+
+  const [showMenu, setShowMenu] = useState(false);
 
   useEffect(() => {
     window.addEventListener("scroll", () => {
-      window.scrollY > 0 ? setOnScroll(true) : setOnScroll(false);
+      if (window.scrollY > 0) {
+        setOnScroll(true);
+      } else {
+        setOnScroll(false);
+      }
     });
   });
 
   return (
-    <motion.div
-      variants={fadeUp}
-      initial="initial"
-      animate="animate"
-      exit="exit"
-      className="sticky w-full top-0 flex justify-center py-5 z-20"
-    >
+    <div className="sticky w-full top-0 flex justify-center py-5 z-40">
       <nav
         className={`${
-          isOnScroll && "bg-white px-10 rounded-full shadow-lg"
-        } w-11/12 flex items-center justify-between text-primary `}
+          isOnScroll && "bg-white px-5 rounded-sm shadow-sm"
+        } w-11/12 md:py-4 flex items-center justify-between text-primary relative `}
       >
-        <h3
-          className={` ${
-            isOnScroll ? "rotate-0" : "rotate-180"
-          } font-bold tracking-widest`}
-        >
-          JOMARI
-        </h3>
-        <ul className=" flex flex-wrap space-x-5">
+        <h3 className=" tracking-widest rotate-180">TRMJ</h3>
+        <aside className=" md:hidden inline-block">
+          <TiThMenuOutline onClick={() => setShowMenu(true)} />
+        </aside>
+        <ul className=" hidden md:flex flex-wrap space-x-5">
           {menu.map((item, index) => (
             <li key={index}>
               <Link
                 href={item.url}
                 className={` flex items-center text-[.7rem] py-3 relative px-5 ${
-                  pathname === item.url && "text-white"
+                  pathname.includes(item.url) && "text-white"
                 }`}
               >
                 <FaSlackHash className=" text-lg mr-1" />
                 {item.title}
-                {pathname === item.url && (
+                {pathname.includes(item.url) && (
                   <motion.span
                     layoutId="navigation-menu"
                     variants={NavigationBarTransition}
@@ -91,8 +87,9 @@ function NavigationBar() {
             </li>
           ))}
         </ul>
+        {showMenu && <MobileMenu setShowMenu={setShowMenu} menu={menu} />}
       </nav>
-    </motion.div>
+    </div>
   );
 }
 

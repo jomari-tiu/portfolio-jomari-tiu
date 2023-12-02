@@ -11,5 +11,5 @@ export default function InviewContainer({ children }: Props) {
     threshold: 0.2,
   });
 
-  return <motion.div ref={ref}>{inView && <>{children}</>}</motion.div>;
+  return <div ref={ref}>{inView && <>{children}</>}</div>;
 }

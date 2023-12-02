@@ -4,7 +4,7 @@ import Link from "next/link";
 
 import { FaSlackHash } from "react-icons/fa";
 
-import { NavigationBarTransition } from "../Animation/Animation";
+import { NavigationBarTransition } from "../../Animation/Animation";
 
 export const LinkMenu = ({ item, pathname }: any) => {
   return (

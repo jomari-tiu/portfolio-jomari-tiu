@@ -22,13 +22,6 @@ const config: Config = {
         header: "var(--header)",
         paragraph: "var(--paragraph)",
       },
-      screens: {
-        xl: { max: "1550px" },
-        lg: { max: "1366px" },
-        md: { max: "1024px" },
-        s: { max: "640px" },
-        xs: { max: "390px" },
-      },
     },
   },
   plugins: [],

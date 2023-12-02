@@ -109,7 +109,7 @@ export const FadeRight = {
     },
   },
   exit: {
-    x: -50,
+    x: -500,
     transition: {
       duration: 0.5,
     },

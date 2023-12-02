@@ -7,34 +7,18 @@ import { ButtonTransition } from "./Animation/Animation";
 
 type props = {
   children: React.ReactNode;
-  onClick: () => void;
-  inStagger?: boolean;
+  onClick?: () => void;
 };
 
-function Button({ children, onClick, inStagger }: props) {
+function Button({ children, onClick }: props) {
   return (
     <>
-      {inStagger ? (
-        <motion.button
-          variants={ButtonTransition}
-          onClick={onClick}
-          className="px-10 py-2 bg-customRed text-white tracking-widest"
-        >
-          {children}
-        </motion.button>
-      ) : (
-        <motion.button
-          variants={ButtonTransition}
-          initial="initial"
-          animate="animate"
-          exit="exit"
-          onClick={onClick}
-          className="px-10 py-2 bg-customRed text-white tracking-widest"
-          whileTap={{ scale: 0.9 }}
-        >
-          {children}
-        </motion.button>
-      )}
+      <button
+        onClick={onClick}
+        className="text-center py-2 bg-customRed text-white tracking-widest button-shadow z-10"
+      >
+        {children}
+      </button>
     </>
   );
 }
