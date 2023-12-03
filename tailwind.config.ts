@@ -9,7 +9,8 @@ const config: Config = {
   theme: {
     extend: {
       backgroundImage: {
-        "body-bg": "url('/images/background-building.jpg')",
+        building: "url('/images/background-building.jpg')",
+        forest: "url('/images/background-forest.jpg')",
       },
       // add colors then call it to globals
       colors: {

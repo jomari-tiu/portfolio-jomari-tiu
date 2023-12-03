@@ -7,6 +7,8 @@ import { usePathname } from "next/navigation";
 import { FaSlackHash } from "react-icons/fa";
 import { TiThMenuOutline } from "react-icons/ti";
 
+import { fadeDown } from "@/animation/general";
+
 import MobileMenu from "./MobileMenu";
 
 const menu = [
@@ -42,11 +44,19 @@ function NavigationBar() {
   });
 
   return (
-    <div className="sticky w-full top-0 flex justify-center py-5 z-40">
+    <motion.div
+      variants={fadeDown}
+      className="sticky w-full top-0 flex justify-center py-2 z-40"
+    >
       <nav
         className={`${
-          isOnScroll && "bg-white px-5 rounded-sm shadow-sm"
-        } w-11/12 md:py-4 flex items-center justify-between text-primary relative `}
+          isOnScroll &&
+          `${
+            pathname.includes("/about")
+              ? "bg-black text-white"
+              : "bg-white text-black"
+          } px-5 rounded-sm shadow-sm`
+        } duration-150 w-11/12 flex items-center rounded-lg justify-between text-primary relative `}
       >
         <h3 className=" tracking-widest rotate-180">TRMJ</h3>
         <aside className=" md:hidden inline-block">
@@ -57,19 +67,25 @@ function NavigationBar() {
             <li key={index}>
               <Link
                 href={item.url}
-                className={` flex items-center text-[.7rem] py-3 relative px-5 ${
+                className={` group flex items-center duration-150 text-[.7rem] py-3 relative px-5 ${
                   pathname.includes(item.url) && "text-white"
                 }`}
               >
-                <FaSlackHash className=" text-lg mr-1" />
+                <FaSlackHash className=" text-lg mr-1 group-hover:rotate-45 duration-150" />
                 {item.title}
                 {pathname.includes(item.url) && (
                   <span
-                    className={`absolute bottom-0 left-0 w-full h-full ${
-                      isOnScroll ? "bg-black" : "bg-[#dd0000]"
+                    className={` duration-200 absolute bottom-0 left-0 w-full h-full ${
+                      isOnScroll
+                        ? `${
+                            pathname.includes("/about")
+                              ? "bg-white text-black"
+                              : "bg-black text-white"
+                          }`
+                        : "bg-[#dd0000]"
                     }  z-10 flex justify-center items-center`}
                   >
-                    <FaSlackHash className=" text-lg mr-1" />
+                    <FaSlackHash className=" text-2xl mr-1 rotate-45" />
                     {item.title}
                   </span>
                 )}
@@ -79,7 +95,7 @@ function NavigationBar() {
         </ul>
         {showMenu && <MobileMenu setShowMenu={setShowMenu} menu={menu} />}
       </nav>
-    </div>
+    </motion.div>
   );
 }
 

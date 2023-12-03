@@ -1,8 +1,9 @@
 import React from "react";
 import Link from "next/link";
-import { AiOutlineLinkedin, AiTwotonePhone } from "react-icons/ai";
-import { BsMailbox } from "react-icons/bs";
-import { GrFacebook } from "react-icons/gr";
+import { AiTwotonePhone } from "react-icons/ai";
+import { FaFacebookF } from "react-icons/fa6";
+import { FaLinkedinIn } from "react-icons/fa6";
+import { MdEmail } from "react-icons/md";
 
 const Footer = () => {
   return (
@@ -15,13 +16,13 @@ const Footer = () => {
         </li>
 
         <li className=" flex items-center space-x-2">
-          <GrFacebook className=" text-white  md:text-[2rem]" />{" "}
+          <FaFacebookF className=" text-white  md:text-[2rem]" />{" "}
           <Link href="" className=" text-white md:text-[2rem]">
             Tiu Jmri
           </Link>
         </li>
         <li className=" flex items-center space-x-2 ">
-          <BsMailbox className=" text-white md:text-[2rem]" />
+          <MdEmail className=" text-white md:text-[2rem]" />
           <Link href="" className=" text-white md:text-[2rem]">
             jomtiu16@gmail.com
           </Link>
@@ -33,7 +34,7 @@ const Footer = () => {
           </Link>
         </li>
         <li className=" flex items-center space-x-2">
-          <AiOutlineLinkedin className=" text-white md:text-[2rem]" />
+          <FaLinkedinIn className=" text-white md:text-[2rem]" />
           <Link href="" className=" text-white md:text-[2rem]">
             jomari-tiu
           </Link>

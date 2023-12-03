@@ -52,7 +52,7 @@ const ProjectDetail = () => {
                 <Link
                   href={project?.DemoLink ? project?.DemoLink : "#"}
                   target="_blank"
-                  className=" bg-primary text-white px-5 py-2 rounded-sm hover:bg-secondary duration-200"
+                  className="demo-button"
                 >
                   Demo
                 </Link>
