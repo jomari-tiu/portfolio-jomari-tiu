@@ -1,7 +1,7 @@
 "use client";
 
 import React, { useEffect, useState } from "react";
-import { motion } from "framer-motion";
+import { AnimatePresence, motion } from "framer-motion";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { FaSlackHash } from "react-icons/fa";
@@ -110,7 +110,9 @@ function NavigationBar() {
               </li>
             ))}
           </ul>
-          {showMenu && <MobileMenu setShowMenu={setShowMenu} menu={menu} />}
+          <AnimatePresence mode="wait">
+            {showMenu && <MobileMenu setShowMenu={setShowMenu} menu={menu} />}
+          </AnimatePresence>
         </nav>
       </motion.div>
     </>

@@ -4,7 +4,7 @@ import Image from "next/image";
 
 import Link from "next/link";
 
-import { useParams } from "next/navigation";
+import { useParams, useSearchParams } from "next/navigation";
 
 import { IoIosExpand } from "react-icons/io";
 
@@ -13,10 +13,10 @@ import ImageViewer from "react-simple-image-viewer";
 import { CardType, allProjects } from "@/data/ProjectList";
 
 const ProjectDetail = () => {
-  const params = useParams();
-  const id = params.project;
+  const searchParams = useSearchParams();
+  const projectName = searchParams.get("name");
   const project: CardType = allProjects.filter(
-    (itemFilter) => itemFilter.id === Number(id)
+    (itemFilter) => itemFilter.title === projectName
   )[0];
 
   const [currentImage, setCurrentImage] = useState<number>(0);

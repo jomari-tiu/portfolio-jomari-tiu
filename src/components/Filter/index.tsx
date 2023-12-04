@@ -40,7 +40,7 @@ const Filter = ({ list, setSelected, selected }: Props) => {
     }
   };
   return (
-    <ul className=" space-y-5 text-secondary uppercase">
+    <ul className=" space-y-5 text-secondary uppercase sticky top-[60px]">
       <li
         className={` cursor-pointer text-[1.2rem] hover:translate-x-5 duration-150 ${
           selected.length === list.length &&

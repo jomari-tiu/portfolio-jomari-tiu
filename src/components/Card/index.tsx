@@ -5,11 +5,9 @@ import Link from "next/link";
 
 import { CardType } from "@/data/ProjectList";
 
-import Button from "../Button";
-
 const Card = ({ item }: { item: CardType }) => {
   return (
-    <Link href={`/projects/${item.id}`} className="group">
+    <Link href={`/projects?name=${item.title}`} className="group">
       <div className=" relative w-full aspect-[1/1.5] ">
         <aside className=" h-full w-full absolute left-0 top-0">
           <Image
