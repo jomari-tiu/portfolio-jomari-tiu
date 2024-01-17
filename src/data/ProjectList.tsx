@@ -47,8 +47,8 @@ export const ProjectList_LWS: CardType[] = [
     id: 1,
     title: "Index Dental",
     Description:
-      "Customized System,\nDental Management System\n\n-Manage Schedule\n-Manage Branch\n-Mange Doctors\n-Manage Patient's Treament Record and Treament Pland and other records\n\nusername: jomaritiu16@gmail.com\npassword: Password123",
-    DemoLink: "https://indx-dentals.staging.indxhealth.com/admin",
+      "Customized System,\nDental Management System\n\n-Manage Schedule\n-Manage Branch\n-Mange Doctors\n-Manage Patient's Treament Record and Treament Pland and other records\n\nusername: jomtiu16@gmail.com\npassword: Password123",
+    DemoLink: "https://tiu-dental.staging.indxhealth.com/admin",
     CodeLink: "",
     ImageName: "indxLogin.png",
     organization: "Lightweight Solutions",
