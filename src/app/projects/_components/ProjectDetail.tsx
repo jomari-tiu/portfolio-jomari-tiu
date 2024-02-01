@@ -49,13 +49,24 @@ const ProjectDetail = () => {
                 ))}
               </ul>
               <div>
-                <Link
-                  href={project?.DemoLink ? project?.DemoLink : "#"}
-                  target="_blank"
-                  className="demo-button"
-                >
-                  Demo
-                </Link>
+                {project?.DemoLink && (
+                  <Link
+                    href={project?.DemoLink ? project?.DemoLink : "#"}
+                    target="_blank"
+                    className="demo-button"
+                  >
+                    Demo System
+                  </Link>
+                )}
+                {project?.DemoLink2 && (
+                  <Link
+                    href={project?.DemoLink2 ? project?.DemoLink2 : "#"}
+                    target="_blank"
+                    className="demo-button"
+                  >
+                    Demo Website
+                  </Link>
+                )}
               </div>
             </div>
           </li>

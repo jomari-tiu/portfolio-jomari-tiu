@@ -20,6 +20,8 @@ function page() {
             image_position={"right"}
             image_bigger={false}
             image_bottom={true}
+            circle={true}
+            square={true}
           />
 
           <SectionLayer
@@ -30,19 +32,23 @@ function page() {
             image_position={"right"}
             image_bigger={true}
             image_bottom={false}
+            circle={false}
+            square={false}
           />
         </div>
         <hr className=" my-10" />
         <h3 className=" text-customRed">Expirience</h3>
         <section className=" space-y-20">
           <SectionLayer
-            label={"Magis Solution"}
-            title={about_expirience.magis_solution.title}
-            content={about_expirience.magis_solution.content}
-            image_url={about_expirience.magis_solution.image_url}
+            label={"Lightweight Solution"}
+            title={about_expirience.lws.title}
+            content={about_expirience.lws.content}
+            image_url={about_expirience.lws.image_url}
             image_position={"right"}
             image_bigger={false}
             image_bottom={false}
+            circle={false}
+            square={true}
           />
           <SectionLayer
             label={"Optimind Technology Solution"}
@@ -52,15 +58,19 @@ function page() {
             image_position={"left"}
             image_bigger={false}
             image_bottom={false}
+            circle={false}
+            square={true}
           />
           <SectionLayer
-            label={"Lightweight Solution"}
-            title={about_expirience.lws.title}
-            content={about_expirience.lws.content}
-            image_url={about_expirience.lws.image_url}
+            label={"Magis Solution"}
+            title={about_expirience.magis_solution.title}
+            content={about_expirience.magis_solution.content}
+            image_url={about_expirience.magis_solution.image_url}
             image_position={"right"}
             image_bigger={false}
             image_bottom={false}
+            circle={false}
+            square={true}
           />
         </section>
       </div>

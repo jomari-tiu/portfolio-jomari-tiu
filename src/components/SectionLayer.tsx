@@ -8,6 +8,8 @@ type Props = {
   image_position: "right" | "left";
   image_bigger: boolean;
   image_bottom: boolean;
+  circle: boolean;
+  square: boolean;
 };
 
 export default function SectionLayer({
@@ -18,6 +20,8 @@ export default function SectionLayer({
   image_position,
   image_bigger,
   image_bottom,
+  circle,
+  square,
 }: Props) {
   return (
     <section
@@ -26,7 +30,7 @@ export default function SectionLayer({
       } gap-6 `}
     >
       <div
-        className={` ${
+        className={` space-y-5 ${
           image_bigger ? "w-full md:w-[40%]" : "w-full md:w-[55%]"
         } flex flex-col ${image_position === "right" && "items-end"} ${
           image_position === "right" && "text-end"
@@ -43,7 +47,13 @@ export default function SectionLayer({
           image_bigger ? "w-full md:w-[55%]" : "w-full md:w-[40%]"
         }`}
       >
-        <aside className=" relative w-full aspect-[1.5/1]">
+        <aside
+          className={` relative w-full ${
+            square ? "aspect-[1/1]" : "aspect-[1.5/1]"
+          } ${
+            circle ? "rounded-full overflow-hidden mb-5 md:mb-10 lg:mb-20" : ""
+          }`}
+        >
           <Image src={image_url} alt="me" fill className=" object-cover" />
         </aside>
       </div>

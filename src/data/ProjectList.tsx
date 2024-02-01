@@ -10,7 +10,8 @@ export type CardType = {
   id: number;
   title: string;
   Description: string;
-  DemoLink: string;
+  DemoLink?: string;
+  DemoLink2?: string;
   CodeLink: string;
   ImageName: string;
   imageList?: string[];
@@ -24,7 +25,7 @@ export const ProjectList_LWS: CardType[] = [
     id: 0,
     title: "Boroucrest",
     Description:
-      "Customized System,\nReal State Management system\n\n-Manage Customer and corporate\n-Finance\n-Reports\n\nusername: jomtiu16.com\npassword: WEV4LY",
+      "Customized System,\nReal State Management with Accounting system\n\n-Manage Customer and corporate\n-Finance\n-Reports\n\nusername: jomtiu16.com\npassword: password321",
     DemoLink: "https://staging-boroughtcrest-cms.vercel.app/login",
     CodeLink: "",
     ImageName: "borouLogin.png",
@@ -47,8 +48,9 @@ export const ProjectList_LWS: CardType[] = [
     id: 1,
     title: "Index Dental",
     Description:
-      "Customized System,\nDental Management System\n\n-Manage Schedule\n-Manage Branch\n-Mange Doctors\n-Manage Patient's Treament Record and Treament Pland and other records\n\nusername: jomtiu16@gmail.com\npassword: Password123",
-    DemoLink: "https://tiu-dental.staging.indxhealth.com/admin",
+      "Customized System,\nDental Healthcare Management System\n\n-Manage Schedule\n-Manage Branch\n-Manage Doctors\n-Manage Patient's Treament Record and Treament Pland and other records\n\nusername: jomtiu16@gmail.com\npassword: Password123",
+    DemoLink: "https://tiu-dental.dev.indxhealth.com/admin",
+    DemoLink2: "https://dev.indxhealth.com",
     CodeLink: "",
     ImageName: "indxLogin.png",
     organization: "Lightweight Solutions",
@@ -70,7 +72,7 @@ export const ProjectList_LWS: CardType[] = [
     title: "Yamaha Website",
     Description:
       "Customized Website,\nYamaha's revamp website for Yamaha website PH",
-    DemoLink: "https://yamaha-website-revamp-git-dev-lws.vercel.app/home",
+    DemoLink2: "https://yamaha-website-revamp-git-dev-lws.vercel.app/home",
     CodeLink: "",
     ImageName: "yamahaHomepage.png",
     organization: "Lightweight Solutions",
