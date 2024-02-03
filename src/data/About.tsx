@@ -36,15 +36,23 @@ export const about_education = {
     <>
       <ul className=" list-disc list-inside space-y-3">
         <li>
-          Graduated at San Jose Elementary School G.M.A, Cavite, 2006 – 2011.
+          <p>
+            Graduated at San Jose Elementary School G.M.A, Cavite, 2006 – 2011.
+          </p>
         </li>
         <li>
-          Graduated at San Jose Community High School G.M.A, Cavite, 2011 –
-          2015.
+          <p>
+            {" "}
+            Graduated at San Jose Community High School G.M.A, Cavite, 2011 –
+            2015.
+          </p>
         </li>
         <li>
-          Graduated Cavite State University Carmona Campus, Cavite Bachelor of
-          Science in Information Technology (2015 - 2022).
+          <p>
+            {" "}
+            Graduated Cavite State University Carmona Campus, Cavite Bachelor of
+            Science in Information Technology (2015 - 2022).
+          </p>
         </li>
       </ul>
     </>
@@ -63,9 +71,15 @@ export const about_expirience = {
           email then I will convert it to tailwind CSS
         </p>
         <ul>
-          <li>• Convert Website to Tailwind CSS</li>
-          <li>• Building the website Front-End</li>
-          <li>• Design Mobile-based features</li>
+          <li>
+            <p>• Convert Website to Tailwind CSS</p>
+          </li>
+          <li>
+            <p>• Building the website Front-End</p>
+          </li>
+          <li>
+            <p>• Design Mobile-based features</p>
+          </li>
         </ul>
       </>
     ),
@@ -82,14 +96,30 @@ export const about_expirience = {
           change the content by the client
         </p>
         <ul>
-          <li>• Building the website Front-End</li>
-          <li>• Design Mobile-based features</li>
-          <li>• Creating Website Architecture</li>
-          <li>• Generating Wordpress Theme and Plugins</li>
-          <li>• Trouble shooting content issues</li>
-          <li>• Backup Wordpress</li>
-          <li>• Deploy Website</li>
-          <li>• Maintain and Improve website</li>
+          <li>
+            <p>• Building the website Front-End</p>
+          </li>
+          <li>
+            <p>• Design Mobile-based features</p>
+          </li>
+          <li>
+            <p>• Creating Website Architecture</p>
+          </li>
+          <li>
+            <p>• Generating Wordpress Theme and Plugins</p>
+          </li>
+          <li>
+            <p>• Trouble shooting content issues</p>
+          </li>
+          <li>
+            <p>• Backup Wordpress</p>
+          </li>
+          <li>
+            <p>• Deploy Website</p>
+          </li>
+          <li>
+            <p>• Maintain and Improve website</p>
+          </li>
         </ul>
       </>
     ),
@@ -106,27 +136,48 @@ export const about_expirience = {
         </p>
         <ul>
           <li>
-            • Tracked user interactions throughout the application with React
-            higher-order components to reuse component logic.
+            <p>
+              • Tracked user interactions throughout the application with React
+              higher-order components to reuse component logic.
+            </p>
           </li>
           <li>
-            • Implemented server-side rendering (SSR) with Next.js to improve
-            page load time, achieving Lighthouse SEO score of 90-100.
-          </li>
-          <li>• Convert Wireframe to Customize System.</li>
-          <li>• Design mobile-based feaures.</li>
-          <li>• Create re-usable components.</li>
-          <li>
-            • Improved front-end performance by reusing function logic/cache
-            data, resulting in faster data fetching and interactive response
-            times.
+            <p>
+              • Implemented server-side rendering (SSR) with Next.js to improve
+              page load time, achieving Lighthouse SEO score of 90-100.
+            </p>
           </li>
           <li>
-            • Collaborate with Back-End and Web Designers to improve usability.
+            <p>• Convert Wireframe to Customize System.</p>
           </li>
-          <li>• Integrate API</li>
-          <li>• Maintain and Improve website / system.</li>
-          <li>• Unit testing</li>
+          <li>
+            <p>• Design mobile-based feaures.</p>
+          </li>
+          <li>
+            <p>• Create re-usable components.</p>
+          </li>
+          <li>
+            <p>
+              • Improved front-end performance by reusing function logic/cache
+              data, resulting in faster data fetching and interactive response
+              times.
+            </p>
+          </li>
+          <li>
+            <p>
+              • Collaborate with Back-End and Web Designers to improve
+              usability.
+            </p>
+          </li>
+          <li>
+            <p>• Integrate API</p>
+          </li>
+          <li>
+            <p>• Maintain and Improve website / system.</p>
+          </li>
+          <li>
+            <p>• Unit testing</p>
+          </li>
         </ul>
       </>
     ),
