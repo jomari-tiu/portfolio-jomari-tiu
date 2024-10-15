@@ -6,6 +6,7 @@ import { LiaReact } from "react-icons/lia";
 import { TbBrandMysql, TbBrandNextjs } from "react-icons/tb";
 import { TfiWordpress } from "react-icons/tfi";
 
+
 export type CardType = {
   id: number;
   title: string;
@@ -16,6 +17,7 @@ export type CardType = {
   ImageName: string;
   imageList?: string[];
   organization: string;
+  projectType: "website" | "web-app";
   technologies: ReactNode[];
   otherImagesFolderName?: string;
 };
@@ -30,6 +32,7 @@ export const ProjectList_LWS: CardType[] = [
     CodeLink: "",
     ImageName: "borouLogin.png",
     organization: "Lightweight Solutions",
+    projectType: "web-app",
     technologies: [
       <TbBrandNextjs className=" text-[3rem]" key={1} />,
       <BiLogoTailwindCss className=" text-[3rem]" key={2} />,
@@ -52,6 +55,7 @@ export const ProjectList_LWS: CardType[] = [
     DemoLink: "https://tiu-dental.dev.indxhealth.com/admin",
     DemoLink2: "https://dev.indxhealth.com",
     CodeLink: "",
+    projectType: "web-app",
     ImageName: "indxLogin.png",
     organization: "Lightweight Solutions",
     technologies: [
@@ -74,6 +78,7 @@ export const ProjectList_LWS: CardType[] = [
       "Customized Website,\nYamaha's revamp website for Yamaha website PH",
     DemoLink2: "https://yamaha-website-revamp-git-dev-lws.vercel.app/home",
     CodeLink: "",
+    projectType: "website",
     ImageName: "yamahaHomepage.png",
     organization: "Lightweight Solutions",
     technologies: [
@@ -97,10 +102,12 @@ export const allProjects: CardType[] = [
     id: 15,
     title: "Hong-Kong Looking Ahead",
     Description: "Wordpress Website,\nProject from THE ECONOMIST",
-    DemoLink: "https://hohenheimn.github.io/HKISD/",
+    DemoLink: "https://jomari-tiu.github.io/HKISD/",
     CodeLink: "https://github.com/Hohenheimn/HKISD",
     ImageName: "hkisd.png",
+    projectType: "website",
     organization: "Optimind Solutions",
+
     technologies: [
       <BsFiletypeScss className=" text-[3rem]" key={1} />,
       <TfiWordpress className=" text-[3rem]" key={2} />,
@@ -113,9 +120,10 @@ export const allProjects: CardType[] = [
     id: 16,
     title: "Bounce",
     Description: "Wordpress Website,\nProject from THE ECONOMIST",
-    DemoLink: "https://hohenheimn.github.io/Bounce/",
+    DemoLink: "https://jomari-tiu.github.io/Bounce/",
     CodeLink: "https://github.com/Hohenheimn/Bounce",
     ImageName: "bounce.png",
+    projectType: "website",
     organization: "Optimind Solutions",
     technologies: [
       <BsFiletypeScss className=" text-[3rem]" key={1} />,
@@ -129,9 +137,10 @@ export const allProjects: CardType[] = [
     id: 17,
     title: "5 Templates",
     Description: "Wordpress Website,\nProject from THE ECONOMIST",
-    DemoLink: " https://hohenheimn.github.io/Four-Templates/",
+    DemoLink: " https://jomari-tiu.github.io/Four-Templates/",
     CodeLink: "https://github.com/Hohenheimn/Four-Templates",
     ImageName: "google4.png",
+    projectType: "website",
     organization: "Optimind Solutions",
     technologies: [
       <BsFiletypeScss className=" text-[3rem]" key={1} />,
@@ -145,8 +154,9 @@ export const allProjects: CardType[] = [
     id: 4,
     title: "Initiative Website",
     Description: "Wordpress Website,\nProject from Magis Solution",
+    projectType: "website",
     DemoLink:
-      "https://hohenheimn.github.io/Project-1-Initiative-Website/public/",
+      "https://jomari-tiu.github.io/Project-1-Initiative-Website/public/",
     CodeLink: "https://github.com/Hohenheimn/Project-1-Initiative-Website",
     ImageName: "initiativeWebiste.png",
     organization: "Magis",
@@ -159,9 +169,10 @@ export const allProjects: CardType[] = [
     id: 5,
     title: "Kyndryl Project",
     Description: "Wordpress Website,\nProject from The Economist",
-    DemoLink: "https://hohenheimn.github.io/Kyndryl-Project/",
+    DemoLink: "https://jomari-tiu.github.io/Kyndryl-Project/",
     CodeLink: "https://github.com/Hohenheimn/kyndryl",
     ImageName: "kyndryl.png",
+    projectType: "website",
     organization: "Optimind Solutions",
     technologies: [
       <BsFiletypeScss className=" text-[3rem]" key={1} />,
@@ -175,9 +186,10 @@ export const allProjects: CardType[] = [
     id: 6,
     title: "STRIDE",
     Description: "Wordpress Website,\nProject from Optimind Solutions",
-    DemoLink: "https://hohenheimn.github.io/STRIDE/",
+    DemoLink: "https://jomari-tiu.github.io/STRIDE/",
     CodeLink: "https://github.com/Hohenheimn/STRIDE",
     ImageName: "stride.png",
+    projectType: "website",
     organization: "Optimind Solutions",
     technologies: [
       <BsFiletypeScss className=" text-[3rem]" key={1} />,
@@ -191,9 +203,10 @@ export const allProjects: CardType[] = [
     id: 7,
     title: "Girl Scout of the Philippines",
     Description: "Wordpress Website,\nProject from Magis Solution",
-    DemoLink: "https://hohenheimn.github.io/GirlScout/public/",
+    DemoLink: "https://jomari-tiu.github.io/GirlScout/public/",
     CodeLink: "https://github.com/Hohenheimn/GirlScout",
     ImageName: "girl-Scout.png",
+    projectType: "website",
     organization: "Magis",
     technologies: [
       <ImHtmlFive className=" text-[3rem]" key={1} />,
@@ -204,9 +217,10 @@ export const allProjects: CardType[] = [
     id: 8,
     title: "Nolan & Co",
     Description: "Wordpress Website,\nProject from Magis Solution",
-    DemoLink: "https://hohenheimn.github.io/SquareSpace/public/",
+    DemoLink: "https://jomari-tiu.github.io/SquareSpace/public/",
     CodeLink: "https://github.com/Hohenheimn/SquareSpace",
     ImageName: "nolan-&-co.png",
+    projectType: "website",
     organization: "Magis",
     technologies: [
       <ImHtmlFive className=" text-[3rem]" key={1} />,
@@ -217,10 +231,11 @@ export const allProjects: CardType[] = [
     id: 9,
     title: "Practice Blog Website",
     Description: "Wordpress Website,\nPractice Blog Website",
-    DemoLink: "https://hohenheimn.github.io/jomari-collection/",
+    DemoLink: "https://jomari-tiu.github.io/jomari-collection/",
     CodeLink: "https://github.com/Hohenheimn/jomari-collection",
     ImageName: "jomari'sCollection.png",
     organization: "Practice website",
+    projectType: "website",
     technologies: [
       <BsFiletypeScss className=" text-[3rem]" key={1} />,
       <ImHtmlFive className=" text-[3rem]" key={2} />,
@@ -230,10 +245,11 @@ export const allProjects: CardType[] = [
     id: 10,
     title: "Mars Wrigley",
     Description: "Wordpress Website,\nProject from The Economist",
-    DemoLink: "https://hohenheimn.github.io/mars-wrigley/",
+    DemoLink: "https://jomari-tiu.github.io/mars-wrigley/",
     CodeLink: "https://github.com/Hohenheimn/mars-wrigley",
     ImageName: "Mars.png",
     organization: "Optimind Solutions",
+    projectType: "website",
     technologies: [
       <BsFiletypeScss className=" text-[3rem]" key={1} />,
       <TfiWordpress className=" text-[3rem]" key={2} />,
@@ -246,10 +262,11 @@ export const allProjects: CardType[] = [
     id: 11,
     title: "Crypto",
     Description: "Wordpress Website,\nProject from The Economist",
-    DemoLink: "https://hohenheimn.github.io/Crypto/",
+    DemoLink: "https://jomari-tiu.github.io/Crypto/",
     CodeLink: "https://github.com/Hohenheimn/Crypto",
     ImageName: "Crypto.png",
     organization: "Optimind Solutions",
+    projectType: "website",
     technologies: [
       <BsFiletypeScss className=" text-[3rem]" key={1} />,
       <TfiWordpress className=" text-[3rem]" key={2} />,
@@ -262,10 +279,11 @@ export const allProjects: CardType[] = [
     id: 12,
     title: "IPC",
     Description: "Wordpress Website,\nProject from Optimind Solutions",
-    DemoLink: "https://hohenheimn.github.io/IPC/",
+    DemoLink: "https://jomari-tiu.github.io/IPC/",
     CodeLink: "https://github.com/Hohenheimn/IPC",
     ImageName: "ipc.png",
     organization: "Optimind Solutions",
+    projectType: "website",
     technologies: [
       <BsFiletypeScss className=" text-[3rem]" key={1} />,
       <TfiWordpress className=" text-[3rem]" key={2} />,
@@ -278,10 +296,11 @@ export const allProjects: CardType[] = [
     id: 13,
     title: "Empowering Future",
     Description: "Wordpress Website,\nProject from Economist",
-    DemoLink: "https://hohenheimn.github.io/empowering-future/",
+    DemoLink: "https://jomari-tiu.github.io/empowering-future/",
     CodeLink: "https://github.com/Hohenheimn/empowering-future",
     ImageName: "empower.png",
     organization: "Optimind Solutions",
+    projectType: "website",
     technologies: [
       <BsFiletypeScss className=" text-[3rem]" key={1} />,
       <TfiWordpress className=" text-[3rem]" key={2} />,
@@ -294,10 +313,11 @@ export const allProjects: CardType[] = [
     id: 14,
     title: "Cognizant",
     Description: "Wordpress Website,\nProject from Economist",
-    DemoLink: "https://hohenheimn.github.io/cognizant/",
+    DemoLink: "https://jomari-tiu.github.io/cognizant/",
     CodeLink: "https://github.com/Hohenheimn/cognizant",
     ImageName: "cognizant.png",
     organization: "Optimind Solutions",
+    projectType: "website",
     technologies: [
       <BsFiletypeScss className=" text-[3rem]" key={1} />,
       <TfiWordpress className=" text-[3rem]" key={2} />,

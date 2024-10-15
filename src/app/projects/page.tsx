@@ -2,29 +2,29 @@
 
 import React, { useState } from "react";
 
-import { saveAs } from "file-saver";
-
 import { motion } from "framer-motion";
 
 import Link from "next/link";
 
-import { useParams, useSearchParams } from "next/navigation";
+import { useSearchParams } from "next/navigation";
 
 import { BsArrowLeft } from "react-icons/bs";
 
-import { fadeUp } from "@/animation/general";
+
 import { fadeUpTitle, titleStagger } from "@/animation/projectAnimation";
 import Card from "@/components/Card";
 import Filter from "@/components/Filter";
 import PageWrapper from "@/components/PageWrapper";
 import { allProjects } from "@/data/ProjectList";
 
+
 import ProjectDetail from "./_components/ProjectDetail";
+
 
 const ProjectPage = () => {
   const searchParams = useSearchParams();
   const project = searchParams.get("name");
-  const list = ["Optimind Solutions", "Lightweight Solutions", "Magis"];
+  const list = ["website", "web-app"];
   const [selected, setSelected] = useState<string[]>(list);
   const title = "Projects";
   const titleArray = title.split("");
@@ -64,9 +64,7 @@ const ProjectPage = () => {
           ) : (
             <ul className=" grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 gap-5">
               {allProjects
-                .filter((filter) =>
-                  selected.includes(`${filter?.organization}`)
-                )
+                .filter((filter) => selected.includes(`${filter?.projectType}`))
                 .map((item, indx) => (
                   <li key={indx}>
                     <Card item={item} />
