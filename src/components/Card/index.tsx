@@ -13,8 +13,8 @@ const Card = ({ item }: { item: CardType }) => {
           <Image
             alt="project"
             fill
-            src={`/images/projects/${item.ImageName}`}
-            className=" object-cover"
+            src={`${item.ImageName}`}
+            className=" object-cover object-top"
           />
           <div className=" bg-[#fdfdfdc2] group-hover:bg-[#6b6b6bc2] group-hover:text-white duration-150 absolute left-0 top-0 w-full h-full px-3 flex flex-col items-center justify-center text-center space-y-3 ">
             <h4 className=" font-bold tracking-wider">{item.organization}</h4>

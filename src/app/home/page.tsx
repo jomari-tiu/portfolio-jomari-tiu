@@ -10,6 +10,7 @@ import Button from "@/components/Button";
 import Card from "@/components/Card";
 import PageWrapper from "@/components/PageWrapper";
 import { ProjectList_LWS } from "@/data/ProjectList";
+import Photogroup from "@/components/Photogroup";
 
 export default function Home() {
   return (
@@ -47,7 +48,10 @@ export default function Home() {
         <div className=" mt-8">
           <Button
             onClick={() => {
-              saveAs("");
+              saveAs(
+                "/images/Jomari-Tiu-Front-End-Developer-Resume-2025",
+                "Jomari-Tiu-Front-End-Developer-Resume-2025.pdf"
+              );
             }}
           >
             Download CV
@@ -55,29 +59,21 @@ export default function Home() {
         </div>
       </motion.div>
 
-      <section className=" mt-10">
-        <aside>
-          <p className=" text-customRed tracking-wider font-bold">RECENT</p>
-          <aside className=" flex justify-between items-center">
-            <p className=" inline-block mb-5 font-thin text-[5vw] tracking-widest text-secondary">
-              Projects
-            </p>
-            <Link
-              href="/projects"
-              className=" flex items-center gap-3 text-xl text-secondary group "
-            >
-              More{" "}
-              <BsArrowRight className="text-2xl group-hover:text-customRed" />
-            </Link>
-          </aside>
+      <section className=" mt-10 ">
+        <p className=" text-customRed tracking-wider font-bold">RECENT</p>
+        <aside className=" flex justify-between items-center relative z-10">
+          <p className=" inline-block mb-5 font-thin text-[5vw] tracking-widest text-secondary">
+            Projects
+          </p>
+          <Link
+            href="/projects"
+            className=" flex items-center gap-3 text-xl text-secondary hover:text-customRed duration-150 font-bold"
+          >
+            More <BsArrowRight className="text-2xl " />
+          </Link>
         </aside>
-        <ul className=" grid grid-cols-1 md:grid-cols-3 gap-10">
-          {ProjectList_LWS.map((item, indx) => (
-            <li key={indx}>
-              <Card item={item} />
-            </li>
-          ))}
-        </ul>
+
+        <Photogroup />
       </section>
     </PageWrapper>
   );

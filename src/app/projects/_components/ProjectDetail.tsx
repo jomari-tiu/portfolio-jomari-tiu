@@ -1,3 +1,4 @@
+/* eslint-disable @next/next/no-img-element */
 "use client";
 import React, { useCallback, useState } from "react";
 import Image from "next/image";
@@ -15,9 +16,9 @@ import { CardType, allProjects } from "@/data/ProjectList";
 const ProjectDetail = () => {
   const searchParams = useSearchParams();
   const projectName = searchParams.get("name");
-  const project: CardType = allProjects.filter(
-    (itemFilter) => itemFilter.title === projectName
-  )[0];
+  const project: CardType = allProjects.filter((itemFilter) => {
+    return itemFilter.title === projectName;
+  })[0];
 
   const [currentImage, setCurrentImage] = useState<number>(0);
   const [isViewerOpen, setIsViewerOpen] = useState(false);
@@ -87,10 +88,9 @@ const ProjectDetail = () => {
             </li>
           ) : (
             <li className=" w-full lg:w-[75%] flex-1 aspect-[1.5/1] relative order-1 lg:order-2">
-              <Image
-                src={`/images/projects/${project?.ImageName}`}
+              <img
+                src={project?.ImageName}
                 alt={""}
-                fill
                 className=" object-cover"
               />
             </li>
@@ -101,8 +101,8 @@ const ProjectDetail = () => {
         <ImageViewer
           src={project.imageList?.map((item) => item)}
           currentIndex={currentImage}
-          disableScroll={true}
-          closeOnClickOutside={true}
+          disableScroll
+          closeOnClickOutside
           onClose={closeImageViewer}
         />
       )}

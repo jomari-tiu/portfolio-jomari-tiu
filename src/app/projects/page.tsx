@@ -10,16 +10,13 @@ import { useSearchParams } from "next/navigation";
 
 import { BsArrowLeft } from "react-icons/bs";
 
-
 import { fadeUpTitle, titleStagger } from "@/animation/projectAnimation";
 import Card from "@/components/Card";
 import Filter from "@/components/Filter";
 import PageWrapper from "@/components/PageWrapper";
 import { allProjects } from "@/data/ProjectList";
 
-
 import ProjectDetail from "./_components/ProjectDetail";
-
 
 const ProjectPage = () => {
   const searchParams = useSearchParams();
