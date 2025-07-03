@@ -6,7 +6,6 @@ import { LiaReact } from "react-icons/lia";
 import { TbBrandMysql, TbBrandNextjs } from "react-icons/tb";
 import { TfiWordpress } from "react-icons/tfi";
 
-
 export type CardType = {
   id: number;
   title: string;
@@ -78,7 +77,7 @@ export const ProjectList_LWS: CardType[] = [
       "Customized Website,\nYamaha's revamp website for Yamaha website PH",
     DemoLink2: "https://yamaha-website-revamp-git-dev-lws.vercel.app/home",
     CodeLink: "",
-    projectType: "website",
+    projectType: "web-app",
     ImageName: "yamahaHomepage.png",
     organization: "Lightweight Solutions",
     technologies: [
