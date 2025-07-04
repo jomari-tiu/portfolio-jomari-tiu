@@ -1,4 +1,7 @@
+import { AnimatePresence, motion } from "framer-motion";
 import type { TAccordion } from ".";
+import AutoHeightWrapper from "@/animation/AutoHeightWrapper";
+import { fadeDown, fadeRight, fadeUp } from "@/animation/general";
 
 type Props = {
   data: TAccordion;
@@ -16,15 +19,28 @@ export default function AccordionItem({ data, active, onSelect }: Props) {
         {data.icon}
         {data.title}
       </div>
-      {active && (
-        <article className=" p-2 over">
-          <div className=" flex gap-2 mb-2 items-center">
-            {data.location && <p className=" font-bold">{data.location}</p>}
-            <p>{data.dateRange}</p>
+      <AutoHeightWrapper show={active}>
+        <div className=" pt-5">
+          <div className="flex gap-2 mb-2 items-center">
+            {data.location && (
+              <motion.p
+                variants={fadeRight}
+                initial="from"
+                animate="to"
+                className="font-bold"
+              >
+                {data.location}
+              </motion.p>
+            )}
+            <motion.p variants={fadeRight} initial="from" animate="to">
+              {data.dateRange}
+            </motion.p>
           </div>
-          {data.content}
-        </article>
-      )}
+          <motion.div variants={fadeDown} initial="from" animate="to">
+            {data.content}
+          </motion.div>
+        </div>
+      </AutoHeightWrapper>
     </li>
   );
 }

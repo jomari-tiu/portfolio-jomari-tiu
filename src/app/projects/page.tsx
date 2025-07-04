@@ -17,6 +17,7 @@ import PageWrapper from "@/components/PageWrapper";
 import { allProjects } from "@/data/ProjectList";
 
 import ProjectDetail from "./_components/ProjectDetail";
+import MiniCard from "@/components/MiniCard";
 
 const ProjectPage = () => {
   const searchParams = useSearchParams();
@@ -26,10 +27,9 @@ const ProjectPage = () => {
   const title = "Projects";
   const titleArray = title.split("");
   return (
-    <PageWrapper className={""} width="full" position={"center"}>
+    <PageWrapper width="full" position={"center"}>
       <section className="flex justify-center py-32">
         <motion.aside
-          layout
           variants={titleStagger}
           initial="from"
           animate="to"
@@ -41,6 +41,33 @@ const ProjectPage = () => {
             </motion.div>
           ))}
         </motion.aside>
+      </section>
+      <section className=" mb-20">
+        <h3 className=" text-center mb-10">
+          Projects I maintain and added a new features
+        </h3>
+        <div className=" flex flex-wrap gap-5 w-full justify-center">
+          <MiniCard
+            title={"Multistore"}
+            description={"Platforms: Core, Websites, Portal"}
+          />
+          <MiniCard
+            title={"MrDelivery"}
+            description={"Platforms: Core, Websites"}
+          />
+          <MiniCard
+            title={"SEC ACES"}
+            description={"Platforms: Core, Examinee, Portal"}
+          />
+          <MiniCard
+            title={"Dingdong"}
+            description={"Platforms: Core, Websites, Portal"}
+          />
+          <MiniCard
+            title={"DMS - Smart Kapartner App"}
+            description={"Platforms: Core, Portal"}
+          />
+        </div>
       </section>
       <ul className=" grid grid-cols-4 gap-10 sm:gap-0">
         <li className=" col-span-4 sm:col-span-1">

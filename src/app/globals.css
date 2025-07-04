@@ -43,6 +43,7 @@ a {
   background-color: var(--background);
   color: var(--primary);
 }
+
 #ReactSimpleImageViewer.styles-module_wrapper__1I_qj {
   z-index: 99;
   background-color: #000000c2;
@@ -58,6 +59,7 @@ a {
   width: 13rem;
   transition: 0.5s ease-in-out;
 }
+
 .button-shadow:hover {
   box-shadow: inset 13rem 0 0 #e98686;
 }
@@ -73,34 +75,4 @@ a {
 }
 .demo-button:hover {
   box-shadow: inset 8rem 0 0 var(--secondary);
-}
-p,
-h1,
-h2,
-h3,
-h4,
-h5 {
-  animation: fadeIn linear both;
-  animation-timeline: view();
-  animation-range: entry 60% cover 50%;
-}
-
-@keyframes fadeRight {
-  0% {
-    opacity: 0;
-    transform: translateX(-10rem);
-  }
-  100% {
-    opacity: 1;
-    transform: translateX(0);
-  }
-}
-
-@keyframes fadeIn {
-  0% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 1;
-  }
 }

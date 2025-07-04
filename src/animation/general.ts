@@ -1,11 +1,11 @@
 export const heroStaggerContainer = {
   from: {
-    scale: 0,
+    opacity: 0,
     overflow: "hidden",
   },
   to: {
+    opacity: 1,
     overflow: "visible",
-    scale: 1,
     transition: {
       delay: 1,
       duration: 0.5,
@@ -55,7 +55,6 @@ export const fadeUp = {
     opacity: 1,
     y: 0,
     transition: {
-      delay: 0.5,
       duration: 0.5,
       ease: "easeInOut",
     },

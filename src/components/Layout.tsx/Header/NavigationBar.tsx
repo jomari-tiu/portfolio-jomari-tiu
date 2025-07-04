@@ -61,6 +61,7 @@ function NavigationBar() {
       >
         <span className={`${isOnScroll && "rotate-180"} duration-150 `}>J</span>
       </motion.aside>
+
       <motion.div
         variants={fadeDown}
         className="sticky w-full top-0 flex justify-center py-2 z-40"

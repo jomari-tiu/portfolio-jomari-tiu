@@ -1,7 +1,6 @@
 "use client";
 
-import React, { useState } from "react";
-import { BsBorderAll } from "react-icons/bs";
+import React, { useCallback } from "react";
 
 type Props = {
   list: string[];
@@ -10,35 +9,39 @@ type Props = {
 };
 
 const Filter = ({ list, setSelected, selected }: Props) => {
-  const filterHandler = (item: string) => {
-    if (item === "all") {
-      setSelected(list);
-      return;
-    }
-
-    if (selected.includes(item) && selected.length === list.length) {
-      const clone = selected.filter((itemFilter) => itemFilter === item);
-      if (clone.length <= 0) {
+  const filterHandler = useCallback(
+    (item: string) => {
+      if (item === "all") {
         setSelected(list);
-      } else {
-        setSelected(clone);
+        return;
       }
-      return;
-    }
 
-    if (selected.includes(item)) {
-      const clone = selected.filter((itemFilter) => itemFilter !== item);
-      if (clone.length <= 0) {
-        setSelected(list);
-      } else {
-        setSelected(clone);
+      if (selected.includes(item) && selected.length === list.length) {
+        const clone = selected.filter((itemFilter) => itemFilter === item);
+        if (clone.length <= 0) {
+          setSelected(list);
+        } else {
+          setSelected(clone);
+        }
+        return;
       }
-      return;
-    } else {
-      setSelected([...selected, item]);
-      return;
-    }
-  };
+
+      if (selected.includes(item)) {
+        const clone = selected.filter((itemFilter) => itemFilter !== item);
+        if (clone.length <= 0) {
+          setSelected(list);
+        } else {
+          setSelected(clone);
+        }
+        return;
+      } else {
+        setSelected([...selected, item]);
+        return;
+      }
+    },
+    [list, selected, setSelected]
+  );
+
   return (
     <ul className=" space-y-5 text-secondary uppercase sticky top-[60px]">
       <li

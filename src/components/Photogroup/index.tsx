@@ -1,4 +1,4 @@
-/* eslint-disable @next/next/no-img-element */
+import Image from "next/image";
 import { useRouter } from "next/navigation";
 import React from "react";
 import { twMerge } from "tailwind-merge";
@@ -74,9 +74,10 @@ const PhotoCard = ({
       )}
       onClick={() => router.push(`/projects?name=${name}`)}
     >
-      <img
+      <Image
         className=" duration-150 object-cover w-full h-full object-top grayscale group-hover:grayscale-0"
         src={src}
+        fill
         alt=""
       />
     </li>

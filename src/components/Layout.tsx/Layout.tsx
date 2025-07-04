@@ -18,7 +18,7 @@ export default function Layout({ children }: Props) {
       setLoading(false);
     }, 4000);
     return () => clearTimeout(timer);
-  });
+  }, []);
 
   return <>{loading ? <FirstLoading /> : children}</>;
 }

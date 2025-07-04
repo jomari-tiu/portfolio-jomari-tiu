@@ -15,12 +15,6 @@ const Footer = () => {
           </h1>
         </li>
 
-        <li className=" flex items-center space-x-2">
-          <FaFacebookF className=" text-white  md:text-[2rem]" />{" "}
-          <Link href="" className=" text-white md:text-[2rem]">
-            Tiu Jmri
-          </Link>
-        </li>
         <li className=" flex items-center space-x-2 ">
           <MdEmail className=" text-white md:text-[2rem]" />
           <Link href="" className=" text-white md:text-[2rem]">
@@ -29,14 +23,17 @@ const Footer = () => {
         </li>
         <li className=" flex items-center space-x-2">
           <AiTwotonePhone className=" text-white md:text-[2rem]" />
-          <Link href="" className=" text-white md:text-[2rem]">
-            9515-532-773
+          <Link href="#" className=" text-white md:text-[2rem]">
+            +6392-8247-4998
           </Link>
         </li>
         <li className=" flex items-center space-x-2">
-          <FaLinkedinIn className=" text-white md:text-[2rem]" />
-          <Link href="" className=" text-white md:text-[2rem]">
-            jomari-tiu
+          <Link
+            href="https://www.linkedin.com/in/jomari-tiu-103b01214/"
+            target="_blank"
+            className=" text-white md:text-[2rem]"
+          >
+            https://www.linkedin.com/in/jomari-tiu-103b01214/
           </Link>
         </li>
       </ul>
