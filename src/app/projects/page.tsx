@@ -14,7 +14,7 @@ import { fadeUpTitle, titleStagger } from "@/animation/projectAnimation";
 import Card from "@/components/Card";
 import Filter from "@/components/Filter";
 import PageWrapper from "@/components/PageWrapper";
-import { allProjects } from "@/data/ProjectList";
+import { allProjects, ProjectList_MSYS } from "@/data/ProjectList";
 
 import ProjectDetail from "./_components/ProjectDetail";
 import MiniCard from "@/components/MiniCard";
@@ -47,26 +47,9 @@ const ProjectPage = () => {
           Projects I maintain and added a new features
         </h3>
         <div className=" flex flex-wrap gap-5 w-full justify-center">
-          <MiniCard
-            title={"Multistore"}
-            description={"Platforms: Core, Websites, Portal"}
-          />
-          <MiniCard
-            title={"MrDelivery"}
-            description={"Platforms: Core, Websites"}
-          />
-          <MiniCard
-            title={"SEC ACES"}
-            description={"Platforms: Core, Examinee, Portal"}
-          />
-          <MiniCard
-            title={"Dingdong"}
-            description={"Platforms: Core, Websites, Portal"}
-          />
-          <MiniCard
-            title={"DMS - Smart Kapartner App"}
-            description={"Platforms: Core, Portal"}
-          />
+          {ProjectList_MSYS.map((item) => (
+            <MiniCard data={item} key={item.id} />
+          ))}
         </div>
       </section>
       <ul className=" grid grid-cols-4 gap-10 sm:gap-0">

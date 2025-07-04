@@ -9,27 +9,94 @@ import { TfiWordpress } from "react-icons/tfi";
 export type CardType = {
   id: number;
   title: string;
-  Description: string;
-  DemoLink?: string;
-  DemoLink2?: string;
-  CodeLink: string;
-  ImageName: string;
+  description?: string;
+  demoLink?: string;
+  demoLink2?: string;
+  CodeLink?: string;
+  thumbnail: string;
   imageList?: string[];
   organization: string;
   projectType: "website" | "web-app";
-  technologies: ReactNode[];
+  technologies?: ReactNode[];
   otherImagesFolderName?: string;
 };
-
+export const ProjectList_MSYS: CardType[] = [
+  {
+    id: 0,
+    title: "Multistore",
+    description:
+      "The Multistore system is an admin platform for managing multiple online stores and their performance. It provides an overview of daily stats such as operating profit, merchant activity, order status, abandoned carts, and new signups. The dashboard includes quick links to live store monitoring, reports, and onboarding. It features sections for analytics, distributors, merchants, customers, discounts, accounting, audit logs, CRM, and partners—enabling admins to track transactions, sales, and revenue trends easily.\n\nPlatforms: \n-Core (Super Admin and Merchant CMS).\n-Marketplace (Merchant Store).\n-Portal (Where customer want to be a merchant to register)",
+    thumbnail: "/images/projects/multistore/page-1.jpg",
+    organization: "Multisys Corporation",
+    projectType: "web-app",
+    otherImagesFolderName: "multistore",
+    imageList: [
+      "/images/projects/multistore/page-1.jpg",
+      "/images/projects/multistore/page-2.jpg",
+      "/images/projects/multistore/page-3.jpg",
+    ],
+  },
+  {
+    id: 1,
+    title: "Mr. Delivery",
+    thumbnail: "/images/projects/mr-delivery/page-4.jpg",
+    description:
+      "The Mr. Delivery system is an admin dashboard designed for managing a delivery fleet. It provides features for monitoring rider activity on a map, viewing rider analytics, managing transactions, approvals, bookings, wallets, and services.",
+    organization: "Multisys Corporation",
+    projectType: "web-app",
+    otherImagesFolderName: "mr-delivery",
+    imageList: [
+      "/images/projects/mr-delivery/page-1.jpg",
+      "/images/projects/mr-delivery/page-2.jpg",
+      "/images/projects/mr-delivery/page-3.jpg",
+      "/images/projects/mr-delivery/page-4.jpg",
+    ],
+  },
+  {
+    id: 2,
+    title: "DMS Smart Kapartner",
+    thumbnail: "/images/projects/dms/page-1.jpg",
+    description:
+      "The KA-PARTNER Portal is a centralized web-based platform designed for managing electronic load dispensing and retail operations. It allows branch administrators to process mobile load sales for various telecom providers, track wallet balances, monitor transaction performance, and manage retailer accounts. Users can easily select promos, input subscriber numbers, and complete sales transactions. The dashboard provides real-time metrics such as sales amounts, retailer rankings, and load wallet status, while offering tools for profile management, reporting, and customer support. This system ensures efficient digital load distribution and operational visibility for load dealers and branch-level admins.\n\nPlatforms: \n-Core.\n-Portal.\n-Mobile App",
+    organization: "Multisys Corporation",
+    projectType: "web-app",
+    otherImagesFolderName: "dms",
+    imageList: [
+      "/images/projects/dms/page-1.jpg",
+      "/images/projects/dms/page-2.jpg",
+      "/images/projects/dms/page-3.jpg",
+      "/images/projects/dms/page-4.jpg",
+    ],
+  },
+  {
+    id: 2,
+    title: "SEC ACES",
+    description:
+      "This system is a webinar management platform designed for administrators to schedule, manage, and monitor online events. From the central dashboard, admins can add webinar schedules, view upcoming events in a calendar view, and access detailed session information including type, registration period, price, participant quota, and meeting links. Additional modules support attendance tracking, exam setup, report generation, registrant management, and content control. The interface also features access control, logs, and versioning—enabling full oversight and streamlined operations for hosting structured online learning or certification programs.\n\nPlatforms: \n-Core.\n-Exam.\n-Portal",
+    thumbnail: "/images/projects/sec/page-1.jpg",
+    organization: "Multisys Corporation",
+    projectType: "web-app",
+    otherImagesFolderName: "sec",
+    imageList: [
+      "/images/projects/sec/page-1.jpg",
+      "/images/projects/sec/page-2.jpg",
+      "/images/projects/sec/page-3.jpg",
+      "/images/projects/sec/page-4.jpg",
+      "/images/projects/sec/page-5.jpg",
+      "/images/projects/sec/page-6.jpg",
+      "/images/projects/sec/page-7.jpg",
+    ],
+  },
+];
 export const ProjectList_LWS: CardType[] = [
   {
     id: 0,
     title: "Boroucrest",
-    Description:
+    description:
       "Customized System,\nReal State Management with Accounting system\n\n-Manage Customer and corporate\n-Finance\n-Reports\n\nusername: jomtiu16.com\npassword: password321",
-    DemoLink: "https://staging-boroughtcrest-cms.vercel.app/login",
+    demoLink: "https://staging-boroughtcrest-cms.vercel.app/login",
     CodeLink: "",
-    ImageName: "/images/projects/borou/borou0.png",
+    thumbnail: "/images/projects/borou/borou0.png",
     organization: "Lightweight Solutions",
     projectType: "web-app",
     technologies: [
@@ -49,13 +116,13 @@ export const ProjectList_LWS: CardType[] = [
   {
     id: 1,
     title: "Index Dental",
-    Description:
+    description:
       "Customized System,\nDental Healthcare Management System\n\n-Manage Schedule\n-Manage Branch\n-Manage Doctors\n-Manage Patient's Treament Record and Treament Pland and other records\n\nusername: jomtiu16@gmail.com\npassword: Password123",
-    DemoLink: "https://tiu-dental.dev.indxhealth.com/admin",
-    DemoLink2: "https://dev.indxhealth.com",
+    demoLink: "https://tiu-dental.dev.indxhealth.com/admin",
+    demoLink2: "https://dev.indxhealth.com",
     CodeLink: "",
     projectType: "web-app",
-    ImageName: "/images/projects/indx/dashboard.png",
+    thumbnail: "/images/projects/indx/dashboard.png",
     organization: "Lightweight Solutions",
     technologies: [
       <TbBrandNextjs className=" text-[3rem]" key={1} />,
@@ -73,12 +140,12 @@ export const ProjectList_LWS: CardType[] = [
   {
     id: 2,
     title: "Yamaha Website",
-    Description:
+    description:
       "Customized Website,\nYamaha's revamp website for Yamaha website PH",
-    DemoLink2: "https://yamaha-website-revamp-git-dev-lws.vercel.app/home",
+    demoLink2: "https://yamaha-website-revamp-git-dev-lws.vercel.app/home",
     CodeLink: "",
     projectType: "web-app",
-    ImageName: "/images/projects/yamaha/gallery.png",
+    thumbnail: "/images/projects/yamaha/gallery.png",
     organization: "Lightweight Solutions",
     technologies: [
       <TbBrandNextjs className=" text-[3rem] text-red-500" key={1} />,
@@ -96,10 +163,10 @@ export const ProjectList_LWS: CardType[] = [
   {
     id: 3,
     title: "IPC",
-    Description: "Wordpress Website,\nProject from Optimind Solutions",
-    DemoLink: "https://jomari-tiu.github.io/IPC/",
+    description: "Wordpress Website,\nProject from Optimind Solutions",
+    demoLink: "https://jomari-tiu.github.io/IPC/",
     CodeLink: "https://github.com/Hohenheimn/IPC",
-    ImageName: "/images/projects/ipc/page-1.png",
+    thumbnail: "/images/projects/ipc/page-1.png",
     organization: "Optimind Solutions",
     projectType: "website",
     technologies: [
@@ -124,10 +191,10 @@ export const allProjects: CardType[] = [
   {
     id: 15,
     title: "Hong-Kong Looking Ahead",
-    Description: "Wordpress Website,\nProject from THE ECONOMIST",
-    DemoLink: "https://jomari-tiu.github.io/HKISD/",
+    description: "Wordpress Website,\nProject from THE ECONOMIST",
+    demoLink: "https://jomari-tiu.github.io/HKISD/",
     CodeLink: "https://github.com/Hohenheimn/HKISD",
-    ImageName: "/images/projects/hk-looking-ahead/hk.png",
+    thumbnail: "/images/projects/hk-looking-ahead/hk.png",
     projectType: "website",
     organization: "Optimind Solutions",
 
@@ -142,10 +209,10 @@ export const allProjects: CardType[] = [
   {
     id: 16,
     title: "Bounce",
-    Description: "Wordpress Website,\nProject from THE ECONOMIST",
-    DemoLink: "https://jomari-tiu.github.io/Bounce/",
+    description: "Wordpress Website,\nProject from THE ECONOMIST",
+    demoLink: "https://jomari-tiu.github.io/Bounce/",
     CodeLink: "https://github.com/Hohenheimn/Bounce",
-    ImageName: "/images/projects/hk-looking-ahead/bounce.png",
+    thumbnail: "/images/projects/hk-looking-ahead/bounce.png",
     projectType: "website",
     organization: "Optimind Solutions",
     technologies: [
@@ -159,10 +226,10 @@ export const allProjects: CardType[] = [
   {
     id: 17,
     title: "5 Templates",
-    Description: "Wordpress Website,\nProject from THE ECONOMIST",
-    DemoLink: " https://jomari-tiu.github.io/Four-Templates/",
+    description: "Wordpress Website,\nProject from THE ECONOMIST",
+    demoLink: " https://jomari-tiu.github.io/Four-Templates/",
     CodeLink: "https://github.com/Hohenheimn/Four-Templates",
-    ImageName: "/images/projects/templates/temp5.png",
+    thumbnail: "/images/projects/templates/temp5.png",
     projectType: "website",
     organization: "Optimind Solutions",
     technologies: [
@@ -176,12 +243,12 @@ export const allProjects: CardType[] = [
   {
     id: 4,
     title: "Initiative Website",
-    Description: "Wordpress Website,\nProject from Magis Solution",
+    description: "Wordpress Website,\nProject from Magis Solution",
     projectType: "website",
-    DemoLink:
+    demoLink:
       "https://jomari-tiu.github.io/Project-1-Initiative-Website/public/",
     CodeLink: "https://github.com/Hohenheimn/Project-1-Initiative-Website",
-    ImageName: "/images/projects/Project-innovation/Page-1.PNG",
+    thumbnail: "/images/projects/Project-innovation/Page-1.PNG",
     organization: "Magis",
     technologies: [
       <BiLogoTailwindCss className=" text-[3rem]" key={1} />,
@@ -191,10 +258,10 @@ export const allProjects: CardType[] = [
   {
     id: 5,
     title: "Kyndryl Project",
-    Description: "Wordpress Website,\nProject from The Economist",
-    DemoLink: "https://jomari-tiu.github.io/Kyndryl-Project/",
+    description: "Wordpress Website,\nProject from The Economist",
+    demoLink: "https://jomari-tiu.github.io/Kyndryl-Project/",
     CodeLink: "https://github.com/Hohenheimn/kyndryl",
-    ImageName: "/images/projects/kyndryl/page-2.png",
+    thumbnail: "/images/projects/kyndryl/page-2.png",
     projectType: "website",
     organization: "Optimind Solutions",
     technologies: [
@@ -208,10 +275,10 @@ export const allProjects: CardType[] = [
   {
     id: 6,
     title: "STRIDE",
-    Description: "Wordpress Website,\nProject from Optimind Solutions",
-    DemoLink: "https://jomari-tiu.github.io/STRIDE/",
+    description: "Wordpress Website,\nProject from Optimind Solutions",
+    demoLink: "https://jomari-tiu.github.io/STRIDE/",
     CodeLink: "https://github.com/Hohenheimn/STRIDE",
-    ImageName: "/images/projects/stride/page-1.png",
+    thumbnail: "/images/projects/stride/page-1.png",
     projectType: "website",
     organization: "Optimind Solutions",
     technologies: [
@@ -232,10 +299,10 @@ export const allProjects: CardType[] = [
   {
     id: 7,
     title: "Girl Scout of the Philippines",
-    Description: "Wordpress Website,\nProject from Magis Solution",
-    DemoLink: "https://jomari-tiu.github.io/GirlScout/public/",
+    description: "Wordpress Website,\nProject from Magis Solution",
+    demoLink: "https://jomari-tiu.github.io/GirlScout/public/",
     CodeLink: "https://github.com/Hohenheimn/GirlScout",
-    ImageName: "/images/projects/GirlScout/page-1.png",
+    thumbnail: "/images/projects/GirlScout/page-1.png",
     projectType: "website",
     organization: "Magis",
     technologies: [
@@ -246,10 +313,10 @@ export const allProjects: CardType[] = [
   {
     id: 8,
     title: "NolanCo",
-    Description: "Wordpress Website,\nProject from Magis Solution",
-    DemoLink: "https://jomari-tiu.github.io/SquareSpace/public/",
+    description: "Wordpress Website,\nProject from Magis Solution",
+    demoLink: "https://jomari-tiu.github.io/SquareSpace/public/",
     CodeLink: "https://github.com/Hohenheimn/SquareSpace",
-    ImageName: "/images/projects/co-nolan/page-1.png",
+    thumbnail: "/images/projects/co-nolan/page-1.png",
     projectType: "website",
     organization: "Magis",
     technologies: [
@@ -267,10 +334,10 @@ export const allProjects: CardType[] = [
   {
     id: 14,
     title: "Cognizant",
-    Description: "Wordpress Website,\nProject from Economist",
-    DemoLink: "https://jomari-tiu.github.io/cognizant/",
+    description: "Wordpress Website,\nProject from Economist",
+    demoLink: "https://jomari-tiu.github.io/cognizant/",
     CodeLink: "https://github.com/Hohenheimn/cognizant",
-    ImageName: "/images/projects/cognizant/page-1.png",
+    thumbnail: "/images/projects/cognizant/page-1.png",
     organization: "Optimind Solutions",
     projectType: "website",
     technologies: [

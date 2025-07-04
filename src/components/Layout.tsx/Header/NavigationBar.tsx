@@ -64,7 +64,7 @@ function NavigationBar() {
 
       <motion.div
         variants={fadeDown}
-        className="sticky w-full top-0 flex justify-center py-2 z-40"
+        className=" w-full flex justify-center py-2 z-40"
       >
         <nav
           className={`${
