@@ -42,45 +42,68 @@ const ProjectPage = () => {
           ))}
         </motion.aside>
       </section>
-      <section className=" mb-20">
-        <h3 className=" text-center mb-10">
-          Projects I maintain and added a new features
-        </h3>
-        <div className=" flex flex-wrap gap-5 w-full justify-center">
-          {ProjectList_MSYS.map((item) => (
-            <MiniCard data={item} key={item.id} />
-          ))}
-        </div>
-      </section>
-      <ul className=" grid grid-cols-4 gap-10 sm:gap-0">
-        <li className=" col-span-4 sm:col-span-1">
-          {project ? (
-            <Link href={"/projects"}>
-              <aside className=" flex items-center gap-3 text-xl">
-                <BsArrowLeft className="text-2xl group-hover:text-customRed" />
-                Back
-              </aside>
-            </Link>
-          ) : (
-            <Filter list={list} setSelected={setSelected} selected={selected} />
-          )}
-        </li>
-        <li className="col-span-4 sm:col-span-3">
-          {project ? (
+      {project ? (
+        <ul className=" grid grid-cols-4 gap-10 sm:gap-0">
+          <li className=" col-span-4 sm:col-span-1">
+            {project ? (
+              <Link href={"/projects"}>
+                <aside className=" flex items-center gap-3 text-xl">
+                  <BsArrowLeft className="text-2xl group-hover:text-customRed" />
+                  Back
+                </aside>
+              </Link>
+            ) : (
+              <Filter
+                list={list}
+                setSelected={setSelected}
+                selected={selected}
+              />
+            )}
+          </li>
+
+          <li className="col-span-4 sm:col-span-3">
             <ProjectDetail />
-          ) : (
-            <ul className=" grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 gap-5">
-              {allProjects
-                .filter((filter) => selected.includes(`${filter?.projectType}`))
-                .map((item, indx) => (
-                  <li key={indx}>
-                    <Card item={item} />
-                  </li>
-                ))}
-            </ul>
-          )}
-        </li>
-      </ul>
+          </li>
+        </ul>
+      ) : (
+        <>
+          <section className=" mb-20">
+            <h3 className=" text-center mb-10">
+              Projects I maintain and added a new features
+            </h3>
+            <div className=" flex flex-wrap gap-5 w-full justify-center">
+              {ProjectList_MSYS.map((item) => (
+                <MiniCard data={item} key={item.id} />
+              ))}
+            </div>
+          </section>
+          <ul className=" grid grid-cols-4 gap-10 sm:gap-0">
+            <li className="col-span-4">
+              <h3 className="mb-10">Projects I developed</h3>
+            </li>
+            <li className=" col-span-4 sm:col-span-1">
+              <Filter
+                list={list}
+                setSelected={setSelected}
+                selected={selected}
+              />
+            </li>
+            <li className="col-span-4 sm:col-span-3">
+              <ul className=" grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 gap-5">
+                {allProjects
+                  .filter((filter) =>
+                    selected.includes(`${filter?.projectType}`)
+                  )
+                  .map((item, indx) => (
+                    <li key={indx}>
+                      <Card item={item} />
+                    </li>
+                  ))}
+              </ul>
+            </li>
+          </ul>
+        </>
+      )}
     </PageWrapper>
   );
 };

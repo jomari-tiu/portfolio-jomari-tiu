@@ -69,7 +69,7 @@ export const ProjectList_MSYS: CardType[] = [
     ],
   },
   {
-    id: 2,
+    id: 3,
     title: "SEC ACES",
     description:
       "This system is a webinar management platform designed for administrators to schedule, manage, and monitor online events. From the central dashboard, admins can add webinar schedules, view upcoming events in a calendar view, and access detailed session information including type, registration period, price, participant quota, and meeting links. Additional modules support attendance tracking, exam setup, report generation, registrant management, and content control. The interface also features access control, logs, and versioning—enabling full oversight and streamlined operations for hosting structured online learning or certification programs.\n\nPlatforms: \n-Core.\n-Exam.\n-Portal",
