@@ -12,7 +12,7 @@ function Button({ children, onClick }: props) {
     <>
       <button
         onClick={onClick}
-        className="text-center py-2 bg-customRed text-white tracking-widest button-shadow z-10"
+        className="text-center py-2 bg-accent text-white tracking-widest button-shadow z-10"
       >
         {children}
       </button>

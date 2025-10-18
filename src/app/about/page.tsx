@@ -11,8 +11,8 @@ function page() {
     <PageWrapper position={"center"} width="narrow">
       <div className=" flex gap-10 mt-10 flex-wrap justify-center">
         <article className="w-full md:w-3/12 flex flex-col items-center">
-          <p className=" text-center mb-5 text-2xl">
-            <span className=" text-customRed">ABOUT&nbsp;ME</span>
+          <p className=" text-center mb-5 text-2xl w-full p-2 bg-accent">
+            <span className=" text-white">ABOUT&nbsp;ME</span>
           </p>
           <img src="/images/me.jpg" alt={"me"} />
         </article>

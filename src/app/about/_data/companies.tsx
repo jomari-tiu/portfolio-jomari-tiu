@@ -159,10 +159,18 @@ export const companies = [
     content: (
       <>
         <p className=" mb-5">
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Perspiciatis
-          vitae, iusto, quia odio autem consequuntur impedit dolorem delectus
-          modi laudantium aliquid laborum velit nam qui? Provident laborum
-          praesentium delectus nam.
+          As a Frontend Developer, I am responsible for bringing digital ideas
+          to life through clean, responsive, and user-friendly interfaces. My
+          work involves maintaining existing projects to ensure smooth
+          functionality and performance, as well as adding new features that
+          enhance the overall user experience. I also create projects from
+          scratch, translating concepts and designs into fully functional web
+          applications. Collaboration is a key part of my role—I work closely
+          with designers to achieve visually consistent results, coordinate with
+          backend developers to integrate APIs and data, and communicate with
+          project managers to meet timelines and deliver high-quality outcomes.
+          My goal is to build efficient, maintainable, and visually appealing
+          interfaces that meet both user and business needs.
         </p>
       </>
     ),

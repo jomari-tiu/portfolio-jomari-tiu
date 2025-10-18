@@ -100,7 +100,7 @@ function NavigationBar() {
                                 ? "bg-white text-black"
                                 : "bg-black text-white"
                             }`
-                          : "bg-[#dd0000]"
+                          : "bg-accent"
                       }  z-10 flex justify-center items-center`}
                     >
                       <FaSlackHash className=" text-2xl mr-1 rotate-45" />

@@ -53,7 +53,7 @@ export default function Home() {
       </motion.article>
 
       <article className=" mt-10 ">
-        <p className=" text-customRed tracking-wider font-bold">RECENT</p>
+        <p className=" text-accent tracking-wider font-bold">RECENT</p>
         <motion.aside
           variants={fadeRight}
           className=" flex justify-between items-center relative z-10"
@@ -63,7 +63,7 @@ export default function Home() {
           </p>
           <Link
             href="/projects"
-            className=" flex items-center gap-3 text-xl text-secondary hover:text-customRed duration-150 font-bold"
+            className=" flex items-center gap-3 text-xl text-secondary hover:text-accent duration-150 font-bold"
           >
             More <BsArrowRight className="text-2xl " />
           </Link>

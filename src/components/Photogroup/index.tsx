@@ -33,6 +33,11 @@ const Photos: {
     pos: "pos2",
     name: "5 Templates",
   },
+  {
+    url: "/images/projects/forge-fitness/full-page.png",
+    pos: "pos3",
+    name: "Forge Fitness",
+  },
 ];
 
 const Photogroup = () => {

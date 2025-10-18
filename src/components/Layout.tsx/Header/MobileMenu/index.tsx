@@ -41,7 +41,7 @@ const MobileMenu = ({ setShowMenu, menu }: props) => {
           <Link
             href={item.url}
             className={` flex items-center  px-5 py-3  text-[2rem] ${
-              pathname.includes(item.url) && " bg-white text-customRed"
+              pathname.includes(item.url) && " bg-white text-accent"
             }`}
           >
             <FaSlackHash className="mr-1" />

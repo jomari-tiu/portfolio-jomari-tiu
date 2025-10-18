@@ -23,6 +23,36 @@ export type CardType = {
 export const ProjectList_MSYS: CardType[] = [
   {
     id: 0,
+    title: "BLGF RPIS Local",
+    description:
+      "A Local Revenue and Property Information System for managing various aspects of local government finance operations. The system includes modules for land and property records, tax schedules, machinery and building assessments, and tax exemptions. It also supports treasury functions such as billing, collection, delinquency tracking, auctions, and tax redemption. The platform provides a centralized dashboard for administrators to efficiently maintain records, monitor financial activities, and generate reports for local taxation and property management.",
+    thumbnail: "/images/projects/blgf/page-1.jpg",
+    organization: "Multisys Corporation",
+    projectType: "web-app",
+    otherImagesFolderName: "blgf",
+    imageList: [
+      "/images/projects/blgf/page-1.jpg",
+      "/images/projects/blgf/page-2.jpg",
+      "/images/projects/blgf/page-3.jpg",
+      "/images/projects/blgf/page-4.jpg",
+      "/images/projects/blgf/page-5.jpg",
+      "/images/projects/blgf/page-6.jpg",
+      "/images/projects/blgf/page-7.jpg",
+      "/images/projects/blgf/page-8.jpg",
+      "/images/projects/blgf/page-9.jpg",
+      "/images/projects/blgf/page-10.jpg",
+      "/images/projects/blgf/page-11.jpg",
+      "/images/projects/blgf/page-12.jpg",
+      "/images/projects/blgf/page-13.jpg",
+      "/images/projects/blgf/page-14.jpg",
+      "/images/projects/blgf/page-15.jpg",
+      "/images/projects/blgf/page-16.jpg",
+      "/images/projects/blgf/page-17.jpg",
+      "/images/projects/blgf/page-18.jpg",
+    ],
+  },
+  {
+    id: 0,
     title: "Multistore",
     description:
       "The Multistore system is an admin platform for managing multiple online stores and their performance. It provides an overview of daily stats such as operating profit, merchant activity, order status, abandoned carts, and new signups. The dashboard includes quick links to live store monitoring, reports, and onboarding. It features sections for analytics, distributors, merchants, customers, discounts, accounting, audit logs, CRM, and partners—enabling admins to track transactions, sales, and revenue trends easily.\n\nPlatforms: \n-Core (Super Admin and Merchant CMS).\n-Marketplace (Merchant Store).\n-Portal (Where customer want to be a merchant to register)",
@@ -87,8 +117,6 @@ export const ProjectList_MSYS: CardType[] = [
       "/images/projects/sec/page-7.jpg",
     ],
   },
-];
-export const ProjectList_LWS: CardType[] = [
   {
     id: 0,
     title: "Boroucrest",
@@ -137,6 +165,29 @@ export const ProjectList_LWS: CardType[] = [
       "/images/projects/indx/financials.png",
     ],
   },
+];
+
+export const websitesList: CardType[] = [
+  {
+    id: 2,
+    title: "Forge Fitness",
+    description: "A simple website for reservation booking",
+    demoLink2: "https://forge-fitness-phi.vercel.app/",
+    CodeLink: "",
+    projectType: "website",
+    thumbnail: "/images/projects/forge-fitness/page-1.png",
+    organization: "Jomari Tiu",
+    technologies: [
+      <TbBrandNextjs className=" text-[3rem] text-red-500" key={1} />,
+      <BiLogoTailwindCss className=" text-[3rem]" key={2} />,
+      <LiaReact className=" text-[3rem]" key={3} />,
+    ],
+    imageList: [
+      "/images/projects/forge-fitness/page-1.png",
+      "/images/projects/forge-fitness/page-2.png",
+      "/images/projects/forge-fitness/full-page.png",
+    ],
+  },
   {
     id: 2,
     title: "Yamaha Website",
@@ -144,7 +195,7 @@ export const ProjectList_LWS: CardType[] = [
       "Customized Website,\nYamaha's revamp website for Yamaha website PH",
     demoLink2: "https://yamaha-website-revamp-git-dev-lws.vercel.app/home",
     CodeLink: "",
-    projectType: "web-app",
+    projectType: "website",
     thumbnail: "/images/projects/yamaha/gallery.png",
     organization: "Lightweight Solutions",
     technologies: [
@@ -184,10 +235,6 @@ export const ProjectList_LWS: CardType[] = [
       "/images/projects/ipc/page-5.png",
     ],
   },
-];
-
-export const allProjects: CardType[] = [
-  ...ProjectList_LWS,
   {
     id: 15,
     title: "Hong-Kong Looking Ahead",

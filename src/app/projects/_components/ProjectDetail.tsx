@@ -11,12 +11,12 @@ import { IoIosExpand } from "react-icons/io";
 
 import ImageViewer from "react-simple-image-viewer";
 
-import { CardType, ProjectList_MSYS, allProjects } from "@/data/ProjectList";
+import { CardType, ProjectList_MSYS, websitesList } from "@/data/ProjectList";
 
 const ProjectDetail = () => {
   const searchParams = useSearchParams();
   const projectName = searchParams.get("name");
-  const project: CardType = [...allProjects, ...ProjectList_MSYS].filter(
+  const project: CardType = [...websitesList, ...ProjectList_MSYS].filter(
     (itemFilter) => {
       return itemFilter.title === projectName;
     }
@@ -38,7 +38,7 @@ const ProjectDetail = () => {
     <>
       <div className=" space-y-5">
         <p>{project?.organization}</p>
-        <h1 className=" text-customRed">{project?.title}</h1>
+        <h1 className=" text-accent">{project?.title}</h1>
         <ul className="flex flex-wrap lg:flex-nowrap gap-10">
           <li className=" space-y-10 w-full lg:w-[25%] order-2 lg:order-1 ">
             <p className=" whitespace-pre-wrap">{project?.description}</p>
