@@ -18,14 +18,15 @@ function page() {
         </article>
         <article className=" space-y-5 flex-1">
           <p>
-            {"I'm"} a Front-End Developer with experience building responsive,
-            user-friendly websites and web applications using technologies like
-            HTML, CSS, Tailwind, JavaScript, TypeScript, React Vite, and
-            Next.js. I specialize in translating design wireframes into
-            functional, high-performance front-end interfaces, integrating APIs,
-            and optimizing for both speed and usability. I enjoy creating clean,
-            reusable code and collaborating with teams to deliver seamless user
-            experiences.
+            {"I'm"} a Full Stack Developer with experience in building
+            responsive, high-performance web and mobile applications. I
+            specialize in developing modern front-end interfaces using React,
+            Next.js, TypeScript, and Tailwind CSS, and implementing efficient
+            back-end systems with Node.js and API integrations. I focus on
+            writing clean, maintainable code and delivering seamless,
+            user-centered experiences across platforms. I also build
+            cross-platform mobile applications, ensuring consistency and
+            performance on both web and mobile.
           </p>
           <div>
             <p className=" mb-5">Educational Background.</p>

@@ -21,6 +21,10 @@ const menu = [
     url: "/about",
   },
   {
+    title: "SERVICES",
+    url: "/services",
+  },
+  {
     title: "PROJECTS",
     url: "/projects",
   },
