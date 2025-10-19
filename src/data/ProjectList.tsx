@@ -169,7 +169,7 @@ export const ProjectList_MSYS: CardType[] = [
 
 export const websitesList: CardType[] = [
   {
-    id: 2,
+    id: 1,
     title: "Forge Fitness",
     description: "A simple website for reservation booking",
     demoLink2: "https://forge-fitness-phi.vercel.app/",
@@ -190,6 +190,21 @@ export const websitesList: CardType[] = [
   },
   {
     id: 2,
+    title: "Wedding Website",
+    description: "A simple website for Wedding",
+    demoLink2: "https://noli-and-tin.vercel.app/",
+    CodeLink: "",
+    projectType: "website",
+    thumbnail: "/images/projects/wedding-noli-tin/full-page.png",
+    organization: "Jomari Tiu",
+    technologies: [
+      <TbBrandNextjs className=" text-[3rem] text-red-500" key={1} />,
+      <BiLogoTailwindCss className=" text-[3rem]" key={2} />,
+      <LiaReact className=" text-[3rem]" key={3} />,
+    ],
+  },
+  {
+    id: 22,
     title: "Yamaha Website",
     description:
       "Customized Website,\nYamaha's revamp website for Yamaha website PH",
@@ -244,7 +259,6 @@ export const websitesList: CardType[] = [
     thumbnail: "/images/projects/hk-looking-ahead/hk.png",
     projectType: "website",
     organization: "Optimind Solutions",
-
     technologies: [
       <BsFiletypeScss className=" text-[3rem]" key={1} />,
       <TfiWordpress className=" text-[3rem]" key={2} />,
