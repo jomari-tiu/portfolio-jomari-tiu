@@ -8,7 +8,7 @@ import {
 } from "@/animation/firstLoadingAnimation";
 
 const FirstLoading = () => {
-  const addName = "omari";
+  const addName = "YNTRI";
   const arrayName = addName.split("");
   return (
     <AnimatePresence mode="wait">
@@ -21,7 +21,7 @@ const FirstLoading = () => {
             exit="exit"
             className="h-[150px] w-[150px] flex justify-center items-baseline bg-black text-black rounded-full text-[104px]"
           >
-            <motion.div variants={color}>J</motion.div>
+            <motion.div variants={color}>S</motion.div>
             {arrayName.map((item, i) => (
               <LetterAnimate key={i} variantName={Appear}>
                 {item}
@@ -42,7 +42,7 @@ const LetterAnimate = ({
   variantName: any;
 }) => {
   return (
-    <motion.span variants={variantName} className="text-[#b1b3b7] origin-left">
+    <motion.span variants={variantName} className="text-accent origin-left">
       {children}
     </motion.span>
   );

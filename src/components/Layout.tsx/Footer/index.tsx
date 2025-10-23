@@ -27,7 +27,7 @@ const Footer = () => {
             +6392-8247-4998
           </Link>
         </li>
-        <li className=" flex items-center space-x-2">
+        {/* <li className=" flex items-center space-x-2">
           <Link
             href="https://www.linkedin.com/in/jomari-tiu-103b01214/"
             target="_blank"
@@ -35,7 +35,7 @@ const Footer = () => {
           >
             https://www.linkedin.com/in/jomari-tiu-103b01214/
           </Link>
-        </li>
+        </li> */}
       </ul>
     </footer>
   );

@@ -16,10 +16,10 @@ const menu = [
     title: "HOME",
     url: "/home",
   },
-  {
-    title: "ABOUT",
-    url: "/about",
-  },
+  // {
+  //   title: "ABOUT",
+  //   url: "/about",
+  // },
   {
     title: "SERVICES",
     url: "/services",
@@ -63,7 +63,7 @@ function NavigationBar() {
         className=" group fixed w-12 text-3xl bottom-5 right-5 aspect-square flex justify-center cursor-pointer hover:bg-secondary duration-150 items-center rounded-full shadow-lg bg-primary text-white z-50"
         onClick={scrollUpHandler}
       >
-        <span className={`${isOnScroll && "rotate-180"} duration-150 `}>J</span>
+        <span className={`${isOnScroll && "rotate-180"} duration-150 `}>S</span>
       </motion.aside>
 
       <motion.div
@@ -80,7 +80,7 @@ function NavigationBar() {
             } px-5 rounded-sm shadow-sm`
           } duration-150 w-11/12 flex items-center rounded-lg justify-between text-primary relative `}
         >
-          <h3 className=" tracking-widest rotate-180">TRMJ</h3>
+          <h3 className=" tracking-widest rotate-180">SYNTRI</h3>
           <aside className=" md:hidden inline-block">
             <TiThMenuOutline onClick={() => setShowMenu(true)} />
           </aside>
