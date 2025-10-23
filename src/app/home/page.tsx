@@ -37,7 +37,7 @@ export default function Home() {
           variants={fadeRight}
           className=" lg:text-[5rem] md:text-[3rem] text-[2.5rem] leading-[95%] text-secondary"
         >
-          <span className=" text-accent">Syntri Consulting.</span>
+          <span className=" text-accent">Syntri Solutions.</span>
         </motion.h3>
         <motion.h2 variants={fadeRight} className="">
           We craft innovative software solutions that help businesses grow.
