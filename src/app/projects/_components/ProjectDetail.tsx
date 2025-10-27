@@ -5,22 +5,22 @@ import Image from "next/image";
 
 import Link from "next/link";
 
-import { useParams, useSearchParams } from "next/navigation";
+import { useParams } from "next/navigation";
 
 import { IoIosExpand } from "react-icons/io";
 
 import ImageViewer from "react-simple-image-viewer";
 
 import { CardType, ProjectList_MSYS, websitesList } from "@/data/ProjectList";
-
 const ProjectDetail = () => {
-  const searchParams = useSearchParams();
-  const projectName = searchParams.get("name");
-  const project: CardType = [...websitesList, ...ProjectList_MSYS].filter(
-    (itemFilter) => {
-      return itemFilter.title === projectName;
-    }
-  )[0];
+  const params = useParams();
+  const projectId = decodeURIComponent(params.id as string);
+  const project: CardType | undefined = [
+    ...websitesList,
+    ...ProjectList_MSYS,
+  ].find((itemFilter) => {
+    return itemFilter.title === projectId;
+  });
 
   const [currentImage, setCurrentImage] = useState<number>(0);
   const [isViewerOpen, setIsViewerOpen] = useState(false);
@@ -57,18 +57,18 @@ const ProjectDetail = () => {
               )}
 
               <div>
-                {project?.demoLink && (
+                {project?.demoApp && (
                   <Link
-                    href={project?.demoLink ? project?.demoLink : "#"}
+                    href={project?.demoApp ? project?.demoApp : "#"}
                     target="_blank"
                     className="demo-button"
                   >
                     Demo System
                   </Link>
                 )}
-                {project?.demoLink2 && (
+                {project?.demoWebsite && (
                   <Link
-                    href={project?.demoLink2 ? project?.demoLink2 : "#"}
+                    href={project?.demoWebsite ? project?.demoWebsite : "#"}
                     target="_blank"
                     className="demo-button"
                   >
@@ -78,33 +78,36 @@ const ProjectDetail = () => {
               </div>
             </div>
           </li>
-          {project?.imageList ? (
+          {!project?.demoApp && !project?.demoWebsite ? (
             <li
               onClick={() => openImageViewer(0)}
               className=" cursor-pointer w-full lg:w-[75%] flex-1 aspect-[1.5/1] order-1 lg:order-2 relative group"
             >
               <Image
-                src={`${project?.imageList[0]}`}
-                alt={""}
+                src={`${project?.imageList?.[0]}`}
+                alt={project?.title || "Project image"}
                 fill
                 className=" object-cover"
+                sizes="(max-width: 1024px) 100vw, 75vw"
+                priority
               />
               <aside className=" scale-0 group-hover:scale-100 duration-150 absolute left-0 top-0 w-full h-full  bg-[#0000002a] flex justify-center items-center z-10">
                 <IoIosExpand className=" text-[3rem] text-primary" />
               </aside>
             </li>
           ) : (
-            <li className=" w-full lg:w-[75%] flex-1 aspect-[1.5/1] relative order-1 lg:order-2">
-              <img
-                src={project?.thumbnail}
-                alt={""}
+            <li className=" w-full border lg:w-[75%] flex-1 aspect-[1.5/1] relative order-1 lg:order-2">
+              <iframe
+                src={project?.demoWebsite}
                 className=" object-cover"
+                width="100%"
+                height="100%"
               />
             </li>
           )}
         </ul>
       </div>
-      {isViewerOpen && project.imageList && (
+      {isViewerOpen && project?.imageList && (
         <ImageViewer
           src={project.imageList?.map((item) => item)}
           currentIndex={currentImage}

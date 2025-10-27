@@ -10,8 +10,8 @@ export type CardType = {
   id: number;
   title: string;
   description?: string;
-  demoLink?: string;
-  demoLink2?: string;
+  demoApp?: string;
+  demoWebsite?: string;
   CodeLink?: string;
   thumbnail: string;
   imageList?: string[];
@@ -122,7 +122,7 @@ export const ProjectList_MSYS: CardType[] = [
     title: "Boroucrest",
     description:
       "Customized System,\nReal State Management with Accounting system\n\n-Manage Customer and corporate\n-Finance\n-Reports\n\nusername: jomtiu16.com\npassword: password321",
-    demoLink: "https://staging-boroughtcrest-cms.vercel.app/login",
+    demoApp: "https://staging-boroughtcrest-cms.vercel.app/login",
     CodeLink: "",
     thumbnail: "/images/projects/borou/borou0.png",
     organization: "Lightweight Solutions",
@@ -146,8 +146,8 @@ export const ProjectList_MSYS: CardType[] = [
     title: "Index Dental",
     description:
       "Customized System,\nDental Healthcare Management System\n\n-Manage Schedule\n-Manage Branch\n-Manage Doctors\n-Manage Patient's Treament Record and Treament Pland and other records\n\nusername: jomtiu16@gmail.com\npassword: Password123",
-    demoLink: "https://tiu-dental.dev.indxhealth.com/admin",
-    demoLink2: "https://dev.indxhealth.com",
+    demoApp: "https://tiu-dental.dev.indxhealth.com/admin",
+    demoWebsite: "https://dev.indxhealth.com",
     CodeLink: "",
     projectType: "web-app",
     thumbnail: "/images/projects/indx/dashboard.png",
@@ -172,7 +172,7 @@ export const websitesList: CardType[] = [
     id: 1,
     title: "Forge Fitness",
     description: "A simple website for reservation booking",
-    demoLink2: "https://forge-fitness-phi.vercel.app/",
+    demoWebsite: "https://forge-fitness-phi.vercel.app/",
     CodeLink: "",
     projectType: "website",
     thumbnail: "/images/projects/forge-fitness/page-1.png",
@@ -192,7 +192,7 @@ export const websitesList: CardType[] = [
     id: 2,
     title: "Wedding Website",
     description: "A simple website for Wedding",
-    demoLink2: "https://noli-and-tin.vercel.app/",
+    demoWebsite: "https://noli-and-tin.vercel.app/",
     CodeLink: "",
     projectType: "website",
     thumbnail: "/images/projects/wedding-noli-tin/full-page.png",
@@ -208,7 +208,7 @@ export const websitesList: CardType[] = [
     title: "Yamaha Website",
     description:
       "Customized Website,\nYamaha's revamp website for Yamaha website PH",
-    demoLink2: "https://yamaha-website-revamp-git-dev-lws.vercel.app/home",
+    demoWebsite: "https://yamaha-website-revamp-git-dev-lws.vercel.app/home",
     CodeLink: "",
     projectType: "website",
     thumbnail: "/images/projects/yamaha/gallery.png",
@@ -230,7 +230,7 @@ export const websitesList: CardType[] = [
     id: 3,
     title: "IPC",
     description: "Wordpress Website,\nProject from Optimind Solutions",
-    demoLink: "https://jomari-tiu.github.io/IPC/",
+    demoWebsite: "https://jomari-tiu.github.io/IPC/",
     CodeLink: "https://github.com/Hohenheimn/IPC",
     thumbnail: "/images/projects/ipc/page-1.png",
     organization: "Optimind Solutions",
@@ -254,7 +254,7 @@ export const websitesList: CardType[] = [
     id: 15,
     title: "Hong-Kong Looking Ahead",
     description: "Wordpress Website,\nProject from THE ECONOMIST",
-    demoLink: "https://jomari-tiu.github.io/HKISD/",
+    demoWebsite: "https://jomari-tiu.github.io/HKISD/",
     CodeLink: "https://github.com/Hohenheimn/HKISD",
     thumbnail: "/images/projects/hk-looking-ahead/hk.png",
     projectType: "website",
@@ -271,7 +271,7 @@ export const websitesList: CardType[] = [
     id: 16,
     title: "Bounce",
     description: "Wordpress Website,\nProject from THE ECONOMIST",
-    demoLink: "https://jomari-tiu.github.io/Bounce/",
+    demoWebsite: "https://jomari-tiu.github.io/Bounce/",
     CodeLink: "https://github.com/Hohenheimn/Bounce",
     thumbnail: "/images/projects/hk-looking-ahead/bounce.png",
     projectType: "website",
@@ -288,7 +288,7 @@ export const websitesList: CardType[] = [
     id: 17,
     title: "5 Templates",
     description: "Wordpress Website,\nProject from THE ECONOMIST",
-    demoLink: " https://jomari-tiu.github.io/Four-Templates/",
+    demoWebsite: " https://jomari-tiu.github.io/Four-Templates/",
     CodeLink: "https://github.com/Hohenheimn/Four-Templates",
     thumbnail: "/images/projects/templates/temp5.png",
     projectType: "website",
@@ -306,7 +306,7 @@ export const websitesList: CardType[] = [
     title: "Initiative Website",
     description: "Wordpress Website,\nProject from Magis Solution",
     projectType: "website",
-    demoLink:
+    demoWebsite:
       "https://jomari-tiu.github.io/Project-1-Initiative-Website/public/",
     CodeLink: "https://github.com/Hohenheimn/Project-1-Initiative-Website",
     thumbnail: "/images/projects/Project-innovation/Page-1.PNG",
@@ -320,7 +320,7 @@ export const websitesList: CardType[] = [
     id: 5,
     title: "Kyndryl Project",
     description: "Wordpress Website,\nProject from The Economist",
-    demoLink: "https://jomari-tiu.github.io/Kyndryl-Project/",
+    demoWebsite: "https://jomari-tiu.github.io/Kyndryl-Project/",
     CodeLink: "https://github.com/Hohenheimn/kyndryl",
     thumbnail: "/images/projects/kyndryl/page-2.png",
     projectType: "website",
@@ -337,7 +337,7 @@ export const websitesList: CardType[] = [
     id: 6,
     title: "STRIDE",
     description: "Wordpress Website,\nProject from Optimind Solutions",
-    demoLink: "https://jomari-tiu.github.io/STRIDE/",
+    demoWebsite: "https://jomari-tiu.github.io/STRIDE/",
     CodeLink: "https://github.com/Hohenheimn/STRIDE",
     thumbnail: "/images/projects/stride/page-1.png",
     projectType: "website",
@@ -361,7 +361,7 @@ export const websitesList: CardType[] = [
     id: 7,
     title: "Girl Scout of the Philippines",
     description: "Wordpress Website,\nProject from Magis Solution",
-    demoLink: "https://jomari-tiu.github.io/GirlScout/public/",
+    demoWebsite: "https://jomari-tiu.github.io/GirlScout/public/",
     CodeLink: "https://github.com/Hohenheimn/GirlScout",
     thumbnail: "/images/projects/GirlScout/page-1.png",
     projectType: "website",
@@ -375,7 +375,7 @@ export const websitesList: CardType[] = [
     id: 8,
     title: "NolanCo",
     description: "Wordpress Website,\nProject from Magis Solution",
-    demoLink: "https://jomari-tiu.github.io/SquareSpace/public/",
+    demoWebsite: "https://jomari-tiu.github.io/SquareSpace/public/",
     CodeLink: "https://github.com/Hohenheimn/SquareSpace",
     thumbnail: "/images/projects/co-nolan/page-1.png",
     projectType: "website",
@@ -396,7 +396,7 @@ export const websitesList: CardType[] = [
     id: 14,
     title: "Cognizant",
     description: "Wordpress Website,\nProject from Economist",
-    demoLink: "https://jomari-tiu.github.io/cognizant/",
+    demoWebsite: "https://jomari-tiu.github.io/cognizant/",
     CodeLink: "https://github.com/Hohenheimn/cognizant",
     thumbnail: "/images/projects/cognizant/page-1.png",
     organization: "Optimind Solutions",

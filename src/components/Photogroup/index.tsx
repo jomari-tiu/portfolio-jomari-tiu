@@ -77,13 +77,14 @@ const PhotoCard = ({
         "group cursor-pointer duration-150 ease-linear w-4/12 md:w-2/12 aspect-[1/2] shadow-2xl bg-white p-2 z-10 hover:z-20",
         POSITIONS[pos]
       )}
-      onClick={() => router.push(`/projects?name=${name}`)}
+      onClick={() => router.push(`/projects/${encodeURIComponent(name)}`)}
     >
       <Image
         className=" duration-150 object-cover w-full h-full object-top grayscale group-hover:grayscale-0"
         src={src}
         fill
-        alt=""
+        alt={name}
+        sizes="(max-width: 768px) 33vw, 16vw"
       />
     </li>
   );
