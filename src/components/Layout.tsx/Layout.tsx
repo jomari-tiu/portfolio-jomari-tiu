@@ -11,14 +11,14 @@ type Props = {
   children: React.ReactNode;
 };
 export default function Layout({ children }: Props) {
-  const [loading, setLoading] = useState(true);
+  const [loading, setLoading] = useState(false);
 
-  useEffect(() => {
-    const timer = setTimeout(() => {
-      setLoading(false);
-    }, 4000);
-    return () => clearTimeout(timer);
-  }, []);
+  // useEffect(() => {
+  //   const timer = setTimeout(() => {
+  //     setLoading(false);
+  //   }, 4000);
+  //   return () => clearTimeout(timer);
+  // }, []);
 
   return <>{loading ? <FirstLoading /> : children}</>;
 }

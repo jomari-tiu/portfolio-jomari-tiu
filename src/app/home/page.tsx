@@ -31,21 +31,6 @@ export default function Home() {
           variants={fadeRight}
           className=" lg:text-[5rem] md:text-[3rem] text-[2.5rem] leading-[95%] text-secondary"
         >
-          Welcome to
-        </motion.h3>
-        <motion.h3
-          variants={fadeRight}
-          className=" lg:text-[5rem] md:text-[3rem] text-[2.5rem] leading-[95%] text-secondary"
-        >
-          <span className=" text-accent">Syntri Solutions.</span>
-        </motion.h3>
-        <motion.h2 variants={fadeRight} className="">
-          We craft innovative software solutions that help businesses grow.
-        </motion.h2>
-        {/* <motion.h3
-          variants={fadeRight}
-          className=" lg:text-[5rem] md:text-[3rem] text-[2.5rem] leading-[95%] text-secondary"
-        >
           Hi, I&apos;m Jomari
         </motion.h3>
         <motion.h1
@@ -64,7 +49,7 @@ export default function Home() {
         </motion.h1>
         <div className=" mt-8">
           <Button onClick={downloadHandler}>Download CV</Button>
-        </div> */}
+        </div>
       </motion.article>
 
       <article className=" mt-10 ">

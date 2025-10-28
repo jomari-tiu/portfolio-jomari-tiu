@@ -7,7 +7,7 @@ import { usePathname } from "next/navigation";
 import { FaSlackHash } from "react-icons/fa";
 import { TiThMenuOutline } from "react-icons/ti";
 
-import { fadeDown, fadeUp } from "@/animation/general";
+import { fadeDown } from "@/animation/general";
 
 import MobileMenu from "./MobileMenu";
 
@@ -16,13 +16,9 @@ const menu = [
     title: "HOME",
     url: "/home",
   },
-  // {
-  //   title: "ABOUT",
-  //   url: "/about",
-  // },
   {
-    title: "SERVICES",
-    url: "/services",
+    title: "ABOUT",
+    url: "/about",
   },
   {
     title: "PROJECTS",
@@ -80,7 +76,7 @@ function NavigationBar() {
             } px-5 rounded-sm shadow-sm`
           } duration-150 w-11/12 flex items-center rounded-lg justify-between text-primary relative `}
         >
-          <h3 className=" tracking-widest rotate-180">SYNTRI</h3>
+          <h3 className=" tracking-widest rotate-180">JOM</h3>
           <aside className=" md:hidden inline-block">
             <TiThMenuOutline onClick={() => setShowMenu(true)} />
           </aside>

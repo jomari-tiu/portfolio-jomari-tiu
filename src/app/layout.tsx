@@ -8,8 +8,8 @@ import "./globals.css";
 const raleway = Raleway({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "Syntri Solutions",
-  description: "Syntri Solutions Portfolio Website",
+  title: "Jomari Tiu",
+  description: "Jomari Tiu Portfolio Website",
 };
 
 export default function RootLayout({
