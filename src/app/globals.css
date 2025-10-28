@@ -76,3 +76,8 @@ a {
 .demo-button:hover {
   box-shadow: inset 8rem 0 0 var(--secondary);
 }
+
+.image-container {
+  content-visibility: auto;
+  contain-intrinsic-size: 300px 200px; /* fallback size */
+}
