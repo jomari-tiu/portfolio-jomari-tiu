@@ -5,11 +5,17 @@ import Layout from "@/components/Layout.tsx/Layout";
 
 import "./globals.css";
 
-const raleway = Raleway({ subsets: ["latin"] });
+const raleway = Raleway({
+  subsets: ["latin"],
+  weight: ["100", "300", "400", "700", "900"],
+});
 
 export const metadata: Metadata = {
   title: "Jomari Tiu",
   description: "Jomari Tiu Portfolio Website",
+  icons: {
+    icon: "/images/black-cat.jpg",
+  },
 };
 
 export default function RootLayout({

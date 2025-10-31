@@ -17,7 +17,7 @@ const config: Config = {
         primary: "var(--primary)",
         secondary: "var(--secondary)",
         primaryTransparent: "var(--primaryTransparent)",
-        accent: "#ba9334",
+        accent: "#f5b201",
       },
       fontFamily: {
         header: "var(--header)",

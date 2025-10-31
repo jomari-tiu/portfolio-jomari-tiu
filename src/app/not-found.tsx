@@ -4,7 +4,7 @@ import Image from "next/image";
 import Link from "next/link";
 import React from "react";
 
-import { BsArrowLeft, BsHouse } from "react-icons/bs";
+import { BsArrowLeft } from "react-icons/bs";
 
 import { fadeRight, fadeUp, heroStaggerContainer } from "@/animation/general";
 import Button from "@/components/Button";
@@ -12,21 +12,23 @@ import PageWrapper from "@/components/PageWrapper";
 
 export default function NotFound() {
   return (
-    <PageWrapper width="narrow" position="center" className="bg-white">
+    <PageWrapper width="narrow" position="center">
       <motion.div
         variants={heroStaggerContainer}
         initial="from"
         animate="to"
         className="text-center"
       >
-        <motion.div variants={fadeUp} className="flex flex-col items-center">
+        <motion.div
+          variants={fadeUp}
+          className="flex justify-center items-center gap-5 mt-10"
+        >
           <Image
-            src="/images/black-cat.jpg"
+            src="/images/black-cat.png"
             alt="Lost black cat"
-            width={500}
-            height={500}
-            className="hover:scale-110 transition-transform duration-300"
-            style={{ mixBlendMode: "multiply" }}
+            width={150}
+            height={150}
+            className="hover:scale-110 transition-transform duration-300 py-10"
           />
           <motion.h1
             variants={fadeRight}

@@ -1,3 +1,4 @@
+import { FaPaw } from "react-icons/fa6";
 import { companies } from "../_data/companies";
 
 type Props = {
@@ -17,7 +18,10 @@ const EducationList = ({ data, last }: Props) => {
         {!last && <div className=" min-h-16 flex-1 bg-secondary w-[2px]"></div>}
       </div>
       <div className="flex-1 pb-5">
-        <p className=" font-bold">{data.title}</p>
+        <div className=" flex flex-wrap gap-2 items-center ">
+          <FaPaw />
+          <p className=" font-bold">{data.title}</p>
+        </div>
         {data.content}
         {!last && <hr className=" my-5 bg-secondary" />}
       </div>

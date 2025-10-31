@@ -5,10 +5,16 @@ import Link from "next/link";
 
 import { BsArrowRight } from "react-icons/bs";
 
-import { fadeRight, fadeUp, heroStaggerContainer } from "@/animation/general";
+import {
+  fadeDown,
+  fadeRight,
+  fadeUp,
+  heroStaggerContainer,
+} from "@/animation/general";
 import Button from "@/components/Button";
 import PageWrapper from "@/components/PageWrapper";
 import Photogroup from "@/components/Photogroup";
+import Image from "next/image";
 
 export default function Home() {
   const downloadHandler = async () => {
@@ -20,47 +26,56 @@ export default function Home() {
   };
 
   return (
-    <PageWrapper width="narrow" position={"left"}>
+    <PageWrapper width="medium" position={"left"}>
       <motion.article
         variants={heroStaggerContainer}
         initial="from"
         animate="to"
-        className="py-[5rem] space-y-5 "
+        className="space-y-5 flex items-center gap-5"
       >
-        <motion.h3
-          variants={fadeRight}
-          className=" lg:text-[5rem] md:text-[3rem] text-[2.5rem] leading-[95%] text-secondary"
-        >
-          Hi, I&apos;m Jomari
-        </motion.h3>
-        <motion.h1
-          variants={fadeRight}
-          className=" lg:text-[5rem] md:text-[3rem] text-[2.5rem] leading-[95%]"
-        >
-          Welcome to my Website
-        </motion.h1>
-        <motion.h1
-          variants={fadeRight}
-          drag
-          dragConstraints={{ top: 0, left: 0, bottom: 0, right: 0 }}
-          className=" cursor-pointer lg:text-[7rem] md:text-[5rem] text-[4rem] leading-[95%]"
-        >
-          {"<Front-Engineer/>"}
-        </motion.h1>
-        <div className=" mt-8">
-          <Button onClick={downloadHandler}>Download CV</Button>
+        <div className=" w-8/12">
+          <motion.h3
+            variants={fadeRight}
+            className=" lg:text-[4rem] md:text-[3rem] text-[2.5rem] leading-[95%] text-secondary"
+          >
+            Hi, I&apos;m Jomari
+          </motion.h3>
+          <motion.h1
+            variants={fadeRight}
+            className=" lg:text-[4rem] md:text-[3rem] text-[2.5rem] leading-[95%]"
+          >
+            Welcome to my Website
+          </motion.h1>
+          <motion.h1
+            variants={fadeRight}
+            drag
+            dragConstraints={{ top: 0, left: 0, bottom: 0, right: 0 }}
+            className=" cursor-pointer lg:text-[5rem] md:text-[5rem] text-[4rem] leading-[95%]"
+          >
+            {"<Front-Engineer/>"}
+          </motion.h1>
+          <div className=" mt-8">
+            <Button onClick={downloadHandler}>Download CV</Button>
+          </div>
         </div>
+        <motion.div variants={fadeDown}>
+          <Image
+            src="/images/black-cat-scratching.png"
+            alt="Black cat"
+            width={200}
+            height={200}
+          />
+        </motion.div>
       </motion.article>
 
       <article className=" mt-10 ">
-        <p className=" text-accent tracking-wider font-bold">RECENT</p>
         <motion.aside
           variants={fadeRight}
           className=" flex justify-between items-center relative z-10"
         >
-          <p className=" inline-block mb-5 font-thin text-[5vw] tracking-widest text-secondary">
+          <h3 className=" inline-block mb-5 font-thin text-[5vw] tracking-widest text-secondary">
             Projects
-          </p>
+          </h3>
           <Link
             href="/projects"
             className=" flex items-center gap-3 text-xl text-secondary hover:text-accent duration-150 font-bold"

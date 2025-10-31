@@ -12,6 +12,7 @@ import PageWrapper from "@/components/PageWrapper";
 import { websitesList, ProjectList_MSYS } from "@/data/ProjectList";
 
 import MiniCard from "@/components/MiniCard";
+import Button from "@/components/Button";
 
 const ITEMS_PER_PAGE = 4;
 
@@ -51,8 +52,8 @@ const ProjectPage = () => {
         </motion.aside>
       </section>
 
-      <section className=" mb-20">
-        <h1 className="mb-10 text-center text-accent">WEB-APPLICATION</h1>
+      <section className=" mb-20 flex flex-col items-center gap-10">
+        <h1 className="text-center text-accent">WEB-APPLICATION</h1>
         <div className=" flex flex-wrap gap-5 w-full justify-center">
           {(showAllWebApps
             ? ProjectList_MSYS
@@ -62,16 +63,11 @@ const ProjectPage = () => {
           ))}
         </div>
         {ProjectList_MSYS.length > 4 && (
-          <div className="text-center mt-6">
-            <button
-              onClick={() => setShowAllWebApps(!showAllWebApps)}
-              className="px-6 py-2 bg-accent text-white rounded hover:bg-accent/80 transition-colors"
-            >
-              {showAllWebApps
-                ? "Show Less"
-                : `Show More Web Apps (${ProjectList_MSYS.length - 4} more)`}
-            </button>
-          </div>
+          <Button onClick={() => setShowAllWebApps(!showAllWebApps)}>
+            {showAllWebApps
+              ? "Show Less"
+              : `(${ProjectList_MSYS.length - 4} more)`}
+          </Button>
         )}
       </section>
       <ul className=" grid grid-cols-4 gap-10 sm:gap-0">
@@ -90,29 +86,27 @@ const ProjectPage = () => {
 
           {totalPages > 1 && (
             <div className="flex justify-center items-center gap-4 mt-10">
-              <button
+              <Button
                 onClick={() => setCurrentPage((prev) => Math.max(prev - 1, 1))}
                 disabled={currentPage === 1}
-                className="flex items-center gap-2 px-4 py-2 bg-accent text-white rounded disabled:opacity-50 disabled:cursor-not-allowed hover:bg-accent/80 transition-colors"
+                leadingIcon={<BsChevronLeft />}
               >
-                <BsChevronLeft />
                 Previous
-              </button>
+              </Button>
 
               <span className="text-sm">
                 Page {currentPage} of {totalPages}
               </span>
 
-              <button
+              <Button
                 onClick={() =>
                   setCurrentPage((prev) => Math.min(prev + 1, totalPages))
                 }
                 disabled={currentPage === totalPages}
-                className="flex items-center gap-2 px-4 py-2 bg-accent text-white rounded disabled:opacity-50 disabled:cursor-not-allowed hover:bg-accent/80 transition-colors"
+                trailingIcon={<BsChevronRight />}
               >
                 Next
-                <BsChevronRight />
-              </button>
+              </Button>
             </div>
           )}
         </li>
