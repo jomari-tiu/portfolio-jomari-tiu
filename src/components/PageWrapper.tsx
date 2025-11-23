@@ -35,7 +35,7 @@ function PageWrapper({ children, className, position, width }: Props) {
   const pathname = usePathname();
   return (
     <motion.div
-      className={` flex flex-col duration-150 bg-building bg-fixed ${POSITION[position]}`}
+      className={`border border-red-500 flex flex-col duration-150 bg-building bg-fixed ${POSITION[position]}`}
     >
       <motion.div
         key={pathname}
@@ -47,7 +47,7 @@ function PageWrapper({ children, className, position, width }: Props) {
       >
         <NavigationBar />
         <motion.div variants={fadeUp} className=" flex justify-center ">
-          <div className="w-11/12 flex flex-col z-10 relative">
+          <div className="w-fullflex flex-col z-10 relative">
             <div className=" w-full">{children}</div>
           </div>
         </motion.div>

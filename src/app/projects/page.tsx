@@ -13,6 +13,7 @@ import { websitesList, ProjectList_MSYS } from "@/data/ProjectList";
 
 import MiniCard from "@/components/MiniCard";
 import Button from "@/components/Button";
+import ScrollVelocity from "@/components/Animation/ScrollVelocity";
 
 const ITEMS_PER_PAGE = 4;
 
@@ -70,47 +71,48 @@ const ProjectPage = () => {
           </Button>
         )}
       </section>
-      <ul className=" grid grid-cols-4 gap-10 sm:gap-0">
-        <li className="col-span-4">
-          <h1 className="mb-10 text-center text-accent">WEBSITES</h1>
-        </li>
 
-        <li className="col-span-4">
-          <ul className=" grid grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-5">
-            {paginatedWebsites.map((item, indx) => (
-              <li key={item.id}>
-                <Card item={item} priority={indx < 4} />
-              </li>
-            ))}
-          </ul>
+      <div className=" w-full overflow-hidden border">
+        <ScrollVelocity
+          texts={["React JS | Typescript", "Next JS | Tailwind CSS "]}
+          className="custom-scroll-text"
+          scrollerStyle={{ width: "100%" }}
+        />
+      </div>
 
-          {totalPages > 1 && (
-            <div className="flex justify-center items-center gap-4 mt-10">
-              <Button
-                onClick={() => setCurrentPage((prev) => Math.max(prev - 1, 1))}
-                disabled={currentPage === 1}
-                leadingIcon={<BsChevronLeft />}
-              >
-                Previous
-              </Button>
+      <section className=" mb-20 flex flex-col items-center gap-10 mt-10">
+        <h1 className="text-center text-accent">WEBSITES</h1>
+        <div className=" flex gap-5">
+          {paginatedWebsites.map((item, indx) => (
+            <Card key={item.id} item={item} priority={indx < 4} />
+          ))}
+        </div>
+        {totalPages > 1 && (
+          <div className="flex justify-center items-center gap-4 mt-10">
+            <Button
+              onClick={() => setCurrentPage((prev) => Math.max(prev - 1, 1))}
+              disabled={currentPage === 1}
+              leadingIcon={<BsChevronLeft />}
+            >
+              Previous
+            </Button>
 
-              <span className="text-sm">
-                Page {currentPage} of {totalPages}
-              </span>
+            <span className="text-sm">
+              Page {currentPage} of {totalPages}
+            </span>
 
-              <Button
-                onClick={() =>
-                  setCurrentPage((prev) => Math.min(prev + 1, totalPages))
-                }
-                disabled={currentPage === totalPages}
-                trailingIcon={<BsChevronRight />}
-              >
-                Next
-              </Button>
-            </div>
-          )}
-        </li>
-      </ul>
+            <Button
+              onClick={() =>
+                setCurrentPage((prev) => Math.min(prev + 1, totalPages))
+              }
+              disabled={currentPage === totalPages}
+              trailingIcon={<BsChevronRight />}
+            >
+              Next
+            </Button>
+          </div>
+        )}
+      </section>
     </PageWrapper>
   );
 };

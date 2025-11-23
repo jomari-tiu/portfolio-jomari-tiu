@@ -17,7 +17,7 @@ const Card = ({
       href={`/projects/${encodeURIComponent(item.title)}`}
       className="group"
     >
-      <div className=" relative w-full aspect-[1/1.5] ">
+      <div className=" relative w-[20rem] h-[25rem]">
         <aside className=" h-full w-full absolute left-0 top-0">
           <Image
             alt={item.title}
