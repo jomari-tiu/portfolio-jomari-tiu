@@ -9,7 +9,6 @@ import { TiThMenuOutline } from "react-icons/ti";
 import { fadeDown } from "@/animation/general";
 
 import MobileMenu from "./MobileMenu";
-import { FaPaw } from "react-icons/fa6";
 
 const menu = [
   {
@@ -89,7 +88,6 @@ function NavigationBar() {
                     pathname.includes(item.url) && "text-white"
                   }`}
                 >
-                  <FaPaw className=" text-lg mr-1 group-hover:rotate-45 duration-150" />
                   {item.title}
                   {pathname.includes(item.url) && (
                     <span
@@ -103,7 +101,6 @@ function NavigationBar() {
                           : "bg-accent"
                       }  z-10 flex justify-center items-center`}
                     >
-                      <FaPaw className=" text-2xl mr-1 rotate-45" />
                       {item.title}
                     </span>
                   )}

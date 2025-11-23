@@ -19,7 +19,6 @@ const EducationList = ({ data, last }: Props) => {
       </div>
       <div className="flex-1 pb-5">
         <div className=" flex flex-wrap gap-2 items-center ">
-          <FaPaw />
           <p className=" font-bold">{data.title}</p>
         </div>
         {data.content}

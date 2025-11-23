@@ -31,9 +31,9 @@ export default function Home() {
         variants={heroStaggerContainer}
         initial="from"
         animate="to"
-        className="space-y-5 flex items-center gap-5"
+        className="space-y-5 flex items-center justify-between gap-5"
       >
-        <div className=" w-8/12">
+        <div>
           <motion.h3
             variants={fadeRight}
             className=" lg:text-[4rem] md:text-[3rem] text-[2.5rem] leading-[95%] text-secondary"
@@ -58,12 +58,12 @@ export default function Home() {
             <Button onClick={downloadHandler}>Download CV</Button>
           </div>
         </div>
-        <motion.div variants={fadeDown}>
+        <motion.div variants={fadeDown} className=" ">
           <Image
             src="/images/black-cat-scratching.png"
             alt="Black cat"
-            width={200}
-            height={200}
+            width={100}
+            height={100}
           />
         </motion.div>
       </motion.article>
