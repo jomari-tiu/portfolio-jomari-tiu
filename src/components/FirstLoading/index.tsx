@@ -8,7 +8,7 @@ import {
 } from "@/animation/firstLoadingAnimation";
 
 const FirstLoading = () => {
-  const addName = "OMARI";
+  const addName = "omari";
   const arrayName = addName.split("");
   return (
     <AnimatePresence mode="wait">

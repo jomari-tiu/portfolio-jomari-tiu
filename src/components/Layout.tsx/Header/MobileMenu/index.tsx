@@ -28,7 +28,7 @@ const MobileMenu = ({ setShowMenu, menu }: props) => {
       initial="from"
       animate="to"
       exit="exit"
-      className="md:hidden flex flex-col justify-center fixed top-0 w-full h-full bg-primary left-0 text-white"
+      className="md:hidden flex flex-col justify-center fixed top-0 w-full h-full bg-primary left-0 z-50 text-white"
     >
       <motion.li variants={mobileScale} className=" absolute top-5 right-5">
         <AiOutlineCloseCircle

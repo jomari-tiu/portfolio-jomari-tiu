@@ -42,7 +42,7 @@ const Photos: {
 
 const Photogroup = () => {
   return (
-    <ul className=" relative justify-center flex flex-wrap overflow-hidden pt-[2%] -mt-20 md:-mt-48 ">
+    <ul className=" relative justify-center flex flex-wrap overflow-hidden -mt-28">
       {Photos.map((item) => (
         <PhotoCard
           key={item.url}

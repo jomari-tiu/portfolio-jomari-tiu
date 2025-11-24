@@ -7,7 +7,7 @@ type Props = {
   children: React.ReactNode;
 };
 export default function Layout({ children }: Props) {
-  const [loading, setLoading] = useState(false);
+  const [loading, setLoading] = useState(true);
 
   useEffect(() => {
     const timer = setTimeout(() => {

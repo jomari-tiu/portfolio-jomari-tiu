@@ -31,7 +31,7 @@ export default function Home() {
         variants={heroStaggerContainer}
         initial="from"
         animate="to"
-        className="space-y-5 flex items-center justify-between gap-5"
+        className="space-y-5 relative flex items-end mt-10 justify-between w-11/12 gap-5"
       >
         <div>
           <motion.h3
@@ -58,17 +58,20 @@ export default function Home() {
             <Button onClick={downloadHandler}>Download CV</Button>
           </div>
         </div>
-        <motion.div variants={fadeDown} className=" ">
+        <motion.div
+          variants={fadeDown}
+          className=" absolute right-0 top-0 md:w-1/2 w-1/3 md:h-1/2 h-1/3"
+        >
           <Image
             src="/images/black-cat-scratching.png"
             alt="Black cat"
-            width={100}
-            height={100}
+            fill
+            className="object-contain object-right-bottom"
           />
         </motion.div>
       </motion.article>
 
-      <article className=" mt-10 ">
+      <article className=" mt-10 w-11/12">
         <motion.aside
           variants={fadeRight}
           className=" flex justify-between items-center relative z-10"

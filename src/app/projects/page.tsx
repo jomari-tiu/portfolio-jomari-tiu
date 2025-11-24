@@ -13,7 +13,6 @@ import { websitesList, ProjectList_MSYS } from "@/data/ProjectList";
 
 import MiniCard from "@/components/MiniCard";
 import Button from "@/components/Button";
-import ScrollVelocity from "@/components/Animation/ScrollVelocity";
 
 const ITEMS_PER_PAGE = 4;
 
@@ -37,7 +36,7 @@ const ProjectPage = () => {
     return filteredWebsites.slice(startIndex, startIndex + ITEMS_PER_PAGE);
   }, [filteredWebsites, currentPage]);
   return (
-    <PageWrapper width="full" position={"center"}>
+    <PageWrapper width="full" position={"center"} className=" overflow-hidden">
       <section className="flex justify-center py-32">
         <motion.aside
           variants={titleStagger}
@@ -71,14 +70,6 @@ const ProjectPage = () => {
           </Button>
         )}
       </section>
-
-      <div className=" w-full overflow-hidden border">
-        <ScrollVelocity
-          texts={["React JS | Typescript", "Next JS | Tailwind CSS "]}
-          className="custom-scroll-text"
-          scrollerStyle={{ width: "100%" }}
-        />
-      </div>
 
       <section className=" mb-20 flex flex-col items-center gap-10 mt-10">
         <h1 className="text-center text-accent">WEBSITES</h1>

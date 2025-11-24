@@ -35,11 +35,11 @@ function PageWrapper({ children, className, position, width }: Props) {
   const pathname = usePathname();
   return (
     <motion.div
-      className={`border border-red-500 flex flex-col duration-150 bg-building bg-fixed ${POSITION[position]}`}
+      className={`flex flex-col duration-150 bg-building bg-fixed ${POSITION[position]}`}
     >
       <motion.div
         key={pathname}
-        className={`${className} duration-150 z-10 bg-white pb-10 min-h-[90vh] md:mt-[10vh] mt-0 shadow-lg ${WIDTH[width]}`}
+        className={`${className} duration-150 z-10 bg-white md:mt-[10vh] mt-0 shadow-lg ${WIDTH[width]}`}
         variants={StaggerPageWrapper}
         initial="from"
         animate="to"
@@ -47,8 +47,8 @@ function PageWrapper({ children, className, position, width }: Props) {
       >
         <NavigationBar />
         <motion.div variants={fadeUp} className=" flex justify-center ">
-          <div className="w-fullflex flex-col z-10 relative">
-            <div className=" w-full">{children}</div>
+          <div className="w-full flex flex-col items-center z-10 relative">
+            {children}
           </div>
         </motion.div>
       </motion.div>

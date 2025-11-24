@@ -12,6 +12,7 @@ import { IoIosExpand } from "react-icons/io";
 import ImageViewer from "react-simple-image-viewer";
 
 import { CardType, ProjectList_MSYS, websitesList } from "@/data/ProjectList";
+import Button from "@/components/Button";
 const ProjectDetail = () => {
   const params = useParams();
   const projectId = decodeURIComponent(params.id as string);
@@ -56,23 +57,23 @@ const ProjectDetail = () => {
                 </>
               )}
 
-              <div>
+              <div className=" flex flex-col gap-5">
                 {project?.demoApp && (
                   <Link
                     href={project?.demoApp ? project?.demoApp : "#"}
                     target="_blank"
-                    className="demo-button"
+                    className=" inline-block"
                   >
-                    Demo System
+                    <Button>Demo System</Button>
                   </Link>
                 )}
                 {project?.demoWebsite && (
                   <Link
                     href={project?.demoWebsite ? project?.demoWebsite : "#"}
                     target="_blank"
-                    className="demo-button"
+                    className=" inline-block"
                   >
-                    Demo Website
+                    <Button>Demo Website</Button>
                   </Link>
                 )}
               </div>

@@ -9,7 +9,7 @@ import ProjectDetail from "../_components/ProjectDetail";
 export default function ProjectDetailClient() {
   return (
     <PageWrapper width="full" position={"center"}>
-      <ul className=" grid grid-cols-12 gap-10 sm:gap-0 mt-10">
+      <ul className=" w-11/12 flex flex-col md:flex-row gap-5 my-10">
         <li className=" col-span-4 sm:col-span-1">
           <Link href={"/projects"}>
             <aside className=" flex items-center gap-3 text-xl text-accent font-bold">
@@ -18,7 +18,7 @@ export default function ProjectDetailClient() {
             </aside>
           </Link>
         </li>
-        <li className="col-span-8 sm:col-span-11">
+        <li className="col-span-8 sm:col-span-11 flex-1">
           <ProjectDetail />
         </li>
       </ul>

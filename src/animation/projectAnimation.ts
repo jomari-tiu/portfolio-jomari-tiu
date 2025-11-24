@@ -7,7 +7,7 @@ export const titleStagger = {
     width: 600,
     transition: {
       delay: 1,
-      duration: 0.5,
+      duration: 0.2,
       staggerChildren: 0.3,
       when: "beforeChildren",
     },

@@ -10,7 +10,6 @@ import Accordion from "@/components/Accordion";
 import Image from "next/image";
 import { fadeDown, fadeRight, heroStaggerContainer } from "@/animation/general";
 import { motion } from "framer-motion";
-import VariableProximity from "@/components/Animation/VariableProxi";
 import { about } from "./_data/about";
 
 function AboutPage() {
@@ -21,9 +20,9 @@ function AboutPage() {
         variants={heroStaggerContainer}
         initial="from"
         animate="to"
-        className=" flex gap-10 mt-10 flex-wrap justify-center"
+        className=" flex mt-10 flex-wrap justify-center"
       >
-        <article className="w-full md:w-3/12 flex flex-col items-center">
+        <article className="w-6/12 sm:w-5/12 md:w-4/12 lg:w-3/12 flex flex-col items-center mb-5">
           <motion.div variants={fadeDown}>
             <Image
               src="/images/black-cat-lying.jpg"
@@ -44,19 +43,10 @@ function AboutPage() {
         <motion.div
           ref={containerRef}
           variants={fadeRight}
-          className=" gap-5 flex-1 flex flex-col items-center"
+          className=" gap-5 flex-1 flex flex-col items-center pr-10 pl-10"
         >
           {about.map((item, index) => (
-            <VariableProximity
-              key={index}
-              label={item}
-              className={"variable-proximity-demo"}
-              fromFontVariationSettings="'wght' 400, 'opsz' 9"
-              toFontVariationSettings="'wght' 1000, 'opsz' 40"
-              containerRef={containerRef}
-              radius={100}
-              falloff="linear"
-            />
+            <p key={index}>{item}</p>
           ))}
 
           <div>
