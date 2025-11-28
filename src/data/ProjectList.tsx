@@ -23,7 +23,7 @@ export type CardType = {
 export const ProjectList_MSYS: CardType[] = [
   {
     id: 0,
-    title: "BLGF RPIS Local",
+    title: "BLGF-RPISLocal",
     description:
       "A Local Revenue and Property Information System for managing various aspects of local government finance operations. The system includes modules for land and property records, tax schedules, machinery and building assessments, and tax exemptions. It also supports treasury functions such as billing, collection, delinquency tracking, auctions, and tax redemption. The platform provides a centralized dashboard for administrators to efficiently maintain records, monitor financial activities, and generate reports for local taxation and property management.",
     thumbnail: "/images/projects/blgf/page-1.jpg",
